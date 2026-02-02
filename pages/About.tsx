@@ -80,7 +80,7 @@ const About: React.FC = () => {
         <div className="container mx-auto px-6 text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 animate-in fade-in slide-in-from-top-8 duration-1000">Our Legacy & Mission</h1>
           <p className="text-emerald-200 text-xl max-w-2xl mx-auto font-medium animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
-            Pioneering animal health excellence through innovation and global partnerships since 2010.
+            Pioneering agricultural excellence through innovation and global partnerships since 2010.
           </p>
         </div>
       </section>
@@ -91,13 +91,13 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-in fade-in slide-in-from-left-8 duration-1000">
               <span className="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-4 block">The Journey</span>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-8">About AR Animal Health Ltd</h2>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-8">About AR Fertilizer Limited</h2>
               <div className="space-y-6 text-slate-600 text-lg leading-relaxed font-medium">
                 <p>
                   We are a young and innovative company with a strong presence in the global fertilizer and feed additives business within the Bangladesh market.
                 </p>
                 <p>
-                  Under the leadership of Mr. Atiar Rahman, who possesses over 35 years of vast knowledge in the poultry and feed sector, we have established a legacy of trust and excellence.
+                  Under the leadership of Mr. Atiar Rahman, who possesses over 35 years of vast knowledge in the agricultural sector, we have established a legacy of trust and excellence.
                 </p>
                 <p>
                   Our focus remains on deep processing of phosphorus resources and developing a sustainable phosphorus chemical industry for the prosperity of our national agriculture.
@@ -223,8 +223,8 @@ const About: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
-              { icon: Target, title: "Our Mission", desc: "To provide high-quality biotechnology and mineral additives that ensure national food security and livestock health.", color: "bg-emerald-500" },
-              { icon: Eye, title: "Our Vision", desc: "To be the leading innovator in Asian animal health care, known for integrity, sustainability, and quality.", color: "bg-teal-500" },
+              { icon: Target, title: "Our Mission", desc: "To provide high-quality biotechnology and mineral additives that ensure national food security and agricultural prosperity.", color: "bg-emerald-500" },
+              { icon: Eye, title: "Our Vision", desc: "To be the leading innovator in Asian agricultural care, known for integrity, sustainability, and quality.", color: "bg-teal-500" },
               { icon: Shield, title: "Our Values", desc: "Global standards, local integrity, and a commitment to serving the backbone of our nation's agriculture.", color: "bg-emerald-600" }
             ].map((box, idx) => (
               <div key={idx} className="bg-slate-800/40 backdrop-blur-md p-12 rounded-[3.5rem] border border-slate-700/50 text-center hover:bg-slate-800/60 transition-all hover:-translate-y-2">

@@ -283,7 +283,7 @@ const Products: React.FC = () => {
 
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <a
-                  href={`mailto:?subject=Product Recommendation: ${shareProduct.name}&body=Hi, check out this high-quality product from AR Animal Health: ${getProductLink(shareProduct)}`}
+                  href={`mailto:?subject=Product Recommendation: ${shareProduct.name}&body=Hi, check out this high-quality product from AR Fertilizer: ${getProductLink(shareProduct)}`}
                   className="flex flex-col items-center justify-center p-4 bg-slate-50 rounded-2xl hover:bg-emerald-50 hover:text-emerald-600 transition-all group"
                 >
                   <Mail size={24} className="mb-2 text-slate-400 group-hover:text-emerald-600" />
@@ -299,7 +299,7 @@ const Products: React.FC = () => {
                   <span className="text-[10px] font-black uppercase tracking-widest">LinkedIn</span>
                 </a>
                 <a
-                  href={`https://twitter.com/intent/tweet?text=Optimizing agricultural yields with ${shareProduct.name} by AR Animal Health!&url=${encodeURIComponent(getProductLink(shareProduct))}`}
+                  href={`https://twitter.com/intent/tweet?text=Optimizing agricultural yields with ${shareProduct.name} by AR Fertilizer!&url=${encodeURIComponent(getProductLink(shareProduct))}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center justify-center p-4 bg-slate-50 rounded-2xl hover:bg-sky-50 hover:text-sky-500 transition-all group"

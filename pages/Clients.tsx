@@ -6,20 +6,20 @@ import { PARTNER_DETAILS } from '../constants';
 const TESTIMONIALS = [
   {
     name: "Dr. Hassan Mahmud",
-    role: "Proprietor, Mahmud Poultry Farm",
-    text: "AR Animal Health has been our primary supplier for enzymes and feed additives for 5 years. Their technical expertise and quality of VTR enzymes have significantly improved our feed conversion ratio.",
+    role: "Proprietor, Mahmud Agri-Business",
+    text: "AR Fertilizer has been our primary supplier for enzymes and soil additives for 5 years. Their technical expertise and quality of VTR enzymes have significantly improved our feed conversion ratio.",
     avatar: "assets/clients/client-1.png"
   },
   {
     name: "Engr. Rezaul Karim",
     role: "Director, Green Agri Solutions",
-    text: "The mineral sources from Chanhen, distributed by AR Animal Health, are of exceptional purity. Our clients have seen remarkable growth in bone strength and overall livestock vitality.",
+    text: "The mineral sources from Chanhen, distributed by AR Fertilizer, are of exceptional purity. Our clients have seen remarkable growth in crop strength and overall vitality.",
     avatar: "assets/clients/client-2.png"
   },
   {
     name: "Md. Aminul Islam",
     role: "Senior Consultant, Agri-Biz BD",
-    text: "What sets AR Animal Health apart is their leadership. Mr. Atiar Rahman's deep understanding of the industry ensures that they only bring the best global biotech to our local farmers.",
+    text: "What sets AR Fertilizer apart is their leadership. Mr. Atiar Rahman's deep understanding of the industry ensures that they only bring the best global biotech to our local farmers.",
     avatar: "assets/clients/client-3.png"
   }
 ];

@@ -13,7 +13,7 @@ const Blog: React.FC = () => {
         <div className="container mx-auto px-6 text-center relative z-10">
           <h1 className="text-4xl md:text-7xl font-black text-white mb-6 tracking-tighter">Knowledge Base</h1>
           <p className="text-emerald-200 text-xl max-w-2xl mx-auto font-medium">
-            Technical insights, industry news, and breakthrough research in animal health and nutrition.
+            Technical insights, industry news, and breakthrough research in agriculture and nutrition.
           </p>
         </div>
       </section>
@@ -32,7 +32,7 @@ const Blog: React.FC = () => {
                     </span>
                   </div>
                 </Link>
-                
+
                 <div className="p-10">
                   <div className="flex items-center space-x-4 text-slate-400 text-xs font-bold uppercase tracking-widest mb-6">
                     <div className="flex items-center space-x-1">
@@ -44,19 +44,19 @@ const Blog: React.FC = () => {
                       <span>{post.author}</span>
                     </div>
                   </div>
-                  
+
                   <Link to={`/blog/${post.id}`}>
                     <h2 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-emerald-600 transition-colors leading-tight">
                       {post.title}
                     </h2>
                   </Link>
-                  
+
                   <p className="text-slate-500 mb-8 leading-relaxed font-medium line-clamp-3">
                     {post.excerpt}
                   </p>
-                  
-                  <Link 
-                    to={`/blog/${post.id}`} 
+
+                  <Link
+                    to={`/blog/${post.id}`}
                     className="inline-flex items-center space-x-2 text-emerald-600 font-black uppercase tracking-widest text-xs hover:text-emerald-700 transition-colors"
                   >
                     <span>Read Full Insight</span>
@@ -78,9 +78,9 @@ const Blog: React.FC = () => {
             Subscribe to our technical bulletin to receive the latest scientific breakthroughs directly in your inbox.
           </p>
           <div className="max-w-xl mx-auto flex flex-col md:flex-row gap-4 relative z-10">
-            <input 
-              type="email" 
-              placeholder="Your professional email" 
+            <input
+              type="email"
+              placeholder="Your professional email"
               className="flex-grow bg-white/10 border border-white/20 rounded-2xl px-8 py-5 text-white placeholder:text-emerald-200 focus:outline-none focus:bg-white/20 transition-all font-bold"
             />
             <button className="bg-white text-emerald-600 font-black px-12 py-5 rounded-2xl hover:bg-emerald-50 transition-all shadow-xl">

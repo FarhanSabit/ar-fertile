@@ -1,7 +1,7 @@
 
 export enum Category {
   FERTILIZERS = 'Fertilizers',
-  FEED_ADDITIVES = 'Feed Additives',
+  MICRO_NUTRIENTS = 'Micro-nutrients',
   MINERALS = 'Minerals'
 }
 

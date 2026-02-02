@@ -22,12 +22,12 @@ const Footer: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-black tracking-tighter leading-none">AR FERTILIZER</span>
+                <span className="text-xl font-black tracking-tighter leading-none">AR FERTILIZER LIMITED</span>
                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-500">Innovation in Agriculture</span>
               </div>
             </div>
             <p className="text-slate-400 mb-10 leading-relaxed font-medium">
-              A young and innovative company leading the animal health care and phosphorus chemical industry in Bangladesh since 2010.
+              A young and innovative company leading the phosphorus chemical industry in Bangladesh since 2010.
             </p>
             <div className="flex space-x-5">
               {[
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
                 <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all">
                   <MapPin size={20} />
                 </div>
-                <span className="text-slate-400 text-sm leading-relaxed font-medium">House-51, Flat: A-6 (6th Floor), Rabindra Sarani Road, Sector-3, Uttara, Dhaka-1230</span>
+                <span className="text-slate-400 text-sm leading-relaxed font-medium">House-51, Flat: A-7 (7th Floor), Rabindra Sarani Road, Sector-3, Uttara, Dhaka-1230, Bangladesh</span>
               </li>
               <li className="flex items-center space-x-5 group">
                 <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all">
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
                 <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all">
                   <Mail size={20} />
                 </div>
-                <a href="mailto:info@aranimalhealthltd.com" className="text-slate-400 hover:text-emerald-500 transition-colors font-bold text-sm">info@aranimalhealthltd.com</a>
+                <a href="mailto:info@arfertile.com" className="text-slate-400 hover:text-emerald-500 transition-colors font-bold text-sm">info@arfertile.com</a>
               </li>
             </ul>
           </div>
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
 
         {/* Legal & Copyright */}
         <div className="pt-12 border-t border-slate-800/50 text-center md:flex md:justify-between md:text-left text-slate-500 text-xs font-black uppercase tracking-[0.2em]">
-          <p>© 2024 AR ANIMAL HEALTH LTD. ALL RIGHTS RESERVED.</p>
+          <p>© 2024 AR FERTILIZER LIMITED. ALL RIGHTS RESERVED.</p>
           <div className="mt-6 md:mt-0 flex items-center justify-center space-x-8">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Compliance</a>

@@ -1,8 +1,9 @@
-# AR Fertilizer Ltd - Innovation in Agriculture
+# AR Fertilizer Limited - Innovation in Agriculture
 
-AR Fertilizer Ltd is a leading provider of high-tech agricultural supplies, specializing in fertilizers, feed additives, and minerals. We bridge the gap between global innovation and local farming needs through strategic alliances with world-class partners.
+AR Fertilizer Limited is a leading provider of high-tech agricultural supplies, specializing in fertilizers, feed additives, and minerals. We bridge the gap between global innovation and local farming needs through strategic alliances with world-class partners.
 
-View the app: [AR Fertilizer Ltd - Innovation in Agriculture](https://ar-fertilizer-ltd.vercel.app/)
+View the app: [AR Fertilizer Limited - Innovation in Agriculture](https://ar-fertilizer-ltd.vercel.app/)
+
 ## 🚀 Key Features
 
 - **Comprehensive Product Catalog**: Detailed information on Fertilizers, Feed Additives, and Minerals.
@@ -44,14 +45,17 @@ View the app: [AR Fertilizer Ltd - Innovation in Agriculture](https://ar-fertili
 
 1. Clone the repository (if applicable).
 2. Install dependencies:
+
    ```bash
    npm install
    ```
+
 3. Set the `GEMINI_API_KEY` in `.env.local` to your Gemini API key.
 
 ### Development
 
 Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -59,6 +63,7 @@ npm run dev
 ### Build
 
 Build the project for production:
+
 ```bash
 npm run build
 ```
@@ -66,8 +71,8 @@ npm run build
 ## 📧 Contact Information
 
 - **CEO**: Mr. Atiar Rahman
-- **Email**: atiar@aranimalhealthltd.com
-- **Website**: [AR Animal Health Ltd](http://aranimalhealthltd.com) (referencing team bios)
+- **Email**: <info@arfertile.com>
+- **Website**: [AR Fertilizer Limited](http://arfertile.com) (referencing team bios)
 
 ---
-© 2024 AR Fertilizer Ltd. All rights reserved.
+© 2024 AR Fertilizer Limited. All rights reserved.

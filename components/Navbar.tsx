@@ -79,13 +79,13 @@ const Navbar: React.FC = () => {
             <div className="bg-white rounded-xl p-1 shadow-md border border-slate-100 flex items-center justify-center">
               <img
                 src="/assets/afrin-logo-02.png"
-                alt="AR Animal Health Logo"
+                alt="AR Fertilizer Logo"
                 className="h-10 md:h-12 w-auto object-contain"
               />
             </div>
             <div className="flex flex-col ml-3">
               <span className={`text-xl font-extrabold tracking-tight leading-none transition-colors ${getTextColor()} group-hover:text-brand-maroon-dark`}>
-                AR FERTILIZER
+                AR FERTILIZER LIMITED
               </span>
               <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white bg-orange-500 px-1 py-0.5 rounded shadow-sm mt-0.5">
                 Innovation in Agriculture

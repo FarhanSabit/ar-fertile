@@ -7,11 +7,11 @@ const Contact: React.FC = () => {
       {/* Header */}
       <section className="bg-emerald-700 pt-24 md:pt-32 pb-32 md:pb-48 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-maroon-dark/20 via-transparent to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-slate-50 translate-y-1 clip-path-slant"></div>
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-slate-50 translate-y-1"></div>
         <div className="container mx-auto px-6 relative z-10">
           <h1 className="text-3xl md:text-7xl font-black text-emerald-100 mb-4 md:mb-6 tracking-tighter">Let's Connect</h1>
           <p className="text-emerald-100 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
-            Contact us for wholesale inquiries, partnerships, or technical support for our animal health products.
+            Contact us for wholesale inquiries, partnerships, or technical support for our agricultural products.
           </p>
         </div>
       </section>
@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
                     </div>
                     <h4 className="font-black text-slate-400 uppercase tracking-widest text-xs mb-3">Our Location</h4>
                     <p className="text-slate-800 font-bold text-lg leading-relaxed">
-                      House-51, Flat: A-6 (6th Floor), Rabindra Sarani Road, Sector-3, Uttara, Dhaka-1230.
+                      House-51, Flat: A-7 (7th Floor), Rabindra Sarani Road, Sector-3, Uttara, Dhaka-1230, Bangladesh.
                     </p>
                   </div>
 
@@ -98,7 +98,7 @@ const Contact: React.FC = () => {
                     </div>
                     <h4 className="font-black text-slate-400 uppercase tracking-widest text-xs mb-3">Email Us</h4>
                     <p className="text-slate-800 font-bold text-lg md:text-xl break-all hover:text-brand-maroon transition-colors cursor-pointer">
-                      info@aranimalhealthltd.com
+                      info@arfertile.com
                     </p>
                   </div>
                 </div>
@@ -151,7 +151,7 @@ const Contact: React.FC = () => {
               </div>
               <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">Dedicated Technical Support Team</h2>
               <p className="text-slate-400 text-base md:text-lg font-medium leading-relaxed mb-10">
-                Our specialists are available to provide on-site technical advisory, dosage optimization, and animal health diagnostics to ensure your success with AR Animal Health products.
+                Our specialists are available to provide on-site technical advisory, dosage optimization, and soil diagnostics to ensure your success with AR Fertilizer products.
               </p>
               <div className="grid grid-cols-2 gap-8">
                 <div className="flex items-start space-x-4">
@@ -179,7 +179,7 @@ const Contact: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="h-[400px] md:h-[600px] w-full bg-slate-200 rounded-[2rem] md:rounded-[4rem] overflow-hidden shadow-2xl relative group border-4 md:border-8 border-white">
             <iframe
-              title="AR Animal Health Location"
+              title="AR Fertilizer Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.6206110909143!2d90.39530651439071!3d23.86760219020718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c4230e6c5687%3A0xbe6a72361efb0bb9!2sRabindra%20Sarani%2C%20Dhaka%201230%2C%20Bangladesh!5e0!3m2!1sen!2sbg!4v1644134617529!5m2!1sen!2sbg"
               width="100%"
               height="100%"

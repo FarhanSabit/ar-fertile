@@ -21,7 +21,7 @@ const Home: React.FC = () => {
             <span className="text-brand-maroon font-bold tracking-widest uppercase text-sm mb-4 block">Why Choose Us</span>
             <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Biotechnology for Modern Farming</h2>
             <p className="text-slate-600 leading-relaxed text-base md:text-lg font-medium">
-              We provide science-backed solutions designed to optimize crop yield and animal health across Bangladesh's agricultural sector.
+              We provide science-backed solutions designed to optimize crop yield across Bangladesh's agricultural sector.
             </p>
           </div>
 
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16">
             <div className="max-w-xl text-center md:text-left w-full">
               <span className="text-brand-maroon font-bold tracking-widest uppercase text-sm mb-4 block">Our Partners</span>
-              <h2 className="text-3xl md:text-5_5xl font-extrabold text-slate-900 mb-6 tracking-tight">World Leaders in Agriculture</h2>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">World Leaders in Agriculture</h2>
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -93,9 +93,9 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "Feed Additives", count: "20+ Products", icon: Droplets, img: "/assets/portfolio/portfolio-7.jpg" },
+              { name: "Fertilizers", count: "20+ Products", icon: Droplets, img: "/assets/portfolio/portfolio-7.jpg" },
               { name: "Minerals", count: "10+ Products", icon: TrendingUp, img: "/assets/portfolio/portfolio-8.jpg" },
-              { name: "Veterinary Health", count: "15+ Products", icon: ShieldCheck, img: "/assets/portfolio/portfolio-9.jpg" }
+              { name: "Micro-nutrients", count: "15+ Products", icon: ShieldCheck, img: "/assets/portfolio/portfolio-9.jpg" }
             ].map((cat, idx) => (
               <Link to="/products" key={idx} className="group relative h-[450px] overflow-hidden rounded-[3rem] shadow-lg">
                 <img src={cat.img} alt={cat.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -119,22 +119,22 @@ const Home: React.FC = () => {
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-maroon/5 rounded-full blur-3xl opacity-60" />
               <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-brand-green/5 rounded-full blur-3xl opacity-60" />
               <div className="relative rounded-[3rem] overflow-hidden shadow-2xl z-10 aspect-[4/5]">
-                <img src="/assets/team/team-1.jpg" alt="AR Animal Health CEO" className="w-full h-full object-cover" />
+                <img src="/assets/team/team-1.jpg" alt="AR Fertilizer CEO" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 md:-left-6 bg-white p-6 md:p-8 rounded-3xl shadow-xl z-20 max-w-[280px] md:max-w-[320px] border border-slate-100">
-                <p className="text-slate-600 italic mb-4 leading-relaxed font-medium text-sm md:text-base">"Our mission is to nurture the livestock of our nation with world-class biotechnology and integrity."</p>
+                <p className="text-slate-600 italic mb-4 leading-relaxed font-medium text-sm md:text-base">"Our mission is to nurture the agriculture of our nation with world-class biotechnology and integrity."</p>
                 <p className="font-bold text-slate-900 text-sm md:text-base">- Mr. Atiar Rahman, CEO</p>
               </div>
             </div>
 
             <div>
-              <span className="text-brand-maroon font-bold tracking-widest uppercase text-sm mb-4 block">About AR Animal Health</span>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">Dedicated to Veterinary & Nutritional Excellence</h2>
+              <span className="text-brand-maroon font-bold tracking-widest uppercase text-sm mb-4 block">About AR Fertilizer</span>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">Dedicated to Agricultural & Nutritional Excellence</h2>
               <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-                Starting in 2010, AR Animal Health Ltd has grown into a cornerstone of Bangladesh's veterinary sector. We combine deep local expertise with world-class scientific partnerships.
+                Starting in 2010, AR Fertilizer Limited has grown into a cornerstone of Bangladesh's agricultural sector. We combine deep local expertise with world-class scientific partnerships.
               </p>
               <ul className="space-y-4 mb-10">
-                {["Pioneering animal health innovation", "Strategic partnerships with Sichuan Chanhen & VTR", "Data-driven scientific nutrition approach", "Committed to sustainable national food security"].map((item, idx) => (
+                {["Pioneering agricultural innovation", "Strategic partnerships with Sichuan Chanhen & VTR", "Data-driven scientific nutrition approach", "Committed to sustainable national food security"].map((item, idx) => (
                   <li key={idx} className="flex items-center space-x-3 text-slate-700 font-bold">
                     <CheckCircle2 className="text-brand-green" size={20} />
                     <span>{item}</span>

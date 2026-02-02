@@ -75,11 +75,11 @@ const BlogDetails: React.FC = () => {
                 </p>
                 <h3 className="text-3xl font-black text-slate-900 mt-16 mb-8 tracking-tight">Technical Implementation</h3>
                 <p>
-                  GUANGDONG VTR BIO-TECH CO. LTD is the largest and most professional animal feed enzyme manufacturer in China. With 18 years of professional experience, their technology provides our local market with high-tech products and perfect services. We are willing to work with you for brilliant joint development.
+                  GUANGDONG VTR BIO-TECH CO. LTD is the largest and most professional feed enzyme manufacturer in China. With 18 years of professional experience, their technology provides our local market with high-tech products and perfect services. We are willing to work with you for brilliant joint development.
                 </p>
                 <blockquote className="bg-slate-50 p-12 rounded-[3rem] border border-slate-100 my-16">
-                   <p className="text-2xl font-black text-slate-900 mb-4 leading-tight italic">"The future of poultry health lies in the intersection of biotechnology and sustainable farming practices."</p>
-                   <cite className="text-emerald-600 font-bold uppercase tracking-widest text-sm">— Atiar Rahman, CEO</cite>
+                  <p className="text-2xl font-black text-slate-900 mb-4 leading-tight italic">"The future of agriculture lies in the intersection of biotechnology and sustainable farming practices."</p>
+                  <cite className="text-emerald-600 font-bold uppercase tracking-widest text-sm">— Atiar Rahman, CEO</cite>
                 </blockquote>
               </div>
             </div>
@@ -87,7 +87,7 @@ const BlogDetails: React.FC = () => {
             {/* Tags & Share */}
             <div className="mt-20 pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8">
               <div className="flex flex-wrap gap-3">
-                {['Agriculture', 'Biotech', 'Poultry', 'Research'].map(tag => (
+                {['Agriculture', 'Biotech', 'Fertilizer', 'Research'].map(tag => (
                   <span key={tag} className="flex items-center space-x-2 bg-slate-50 text-slate-500 font-bold px-4 py-2 rounded-xl text-sm border border-slate-100">
                     <Tag size={14} className="text-emerald-500" />
                     <span>{tag}</span>

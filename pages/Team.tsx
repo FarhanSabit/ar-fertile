@@ -32,19 +32,19 @@ const Team: React.FC = () => {
               <span className="text-emerald-600 font-black uppercase tracking-widest text-sm mb-6 block">Our Founder & CEO</span>
               <h2 className="text-4xl lg:text-6xl font-black text-slate-900 mb-8 tracking-tighter leading-none">{TEAM[0].name}</h2>
               <p className="text-slate-600 text-xl mb-12 leading-relaxed italic font-medium">
-                "{TEAM[0].bio} Our commitment to animal health is the cornerstone of AR Group's vision."
+                "{TEAM[0].bio} Our commitment to agricultural excellence is the cornerstone of AR Group's vision."
               </p>
               <div className="flex items-center space-x-6">
-                <a 
-                  href={`mailto:${TEAM[0].socials.email}`} 
+                <a
+                  href={`mailto:${TEAM[0].socials.email}`}
                   className="bg-slate-900 hover:bg-emerald-600 text-white px-10 py-5 rounded-3xl font-black shadow-2xl shadow-slate-900/20 transition-all flex items-center space-x-3 active:scale-95"
                 >
                   <Mail size={20} />
                   <span>Email CEO</span>
                 </a>
-                <a 
-                  href={TEAM[0].socials.linkedin} 
-                  target="_blank" 
+                <a
+                  href={TEAM[0].socials.linkedin}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-16 h-16 bg-slate-100 hover:bg-emerald-100 text-slate-600 hover:text-emerald-600 flex items-center justify-center rounded-3xl transition-all shadow-md active:scale-95"
                   title="LinkedIn Profile"
@@ -80,9 +80,9 @@ const Team: React.FC = () => {
                 </p>
                 <div className="flex items-center justify-center space-x-4">
                   {member.socials.linkedin && (
-                    <a 
-                      href={member.socials.linkedin} 
-                      target="_blank" 
+                    <a
+                      href={member.socials.linkedin}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-slate-50 text-slate-400 hover:bg-emerald-600 hover:text-white rounded-2xl flex items-center justify-center transition-all border border-slate-100 shadow-sm active:scale-90"
                     >
@@ -90,9 +90,9 @@ const Team: React.FC = () => {
                     </a>
                   )}
                   {member.socials.twitter && (
-                    <a 
-                      href={member.socials.twitter} 
-                      target="_blank" 
+                    <a
+                      href={member.socials.twitter}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-slate-50 text-slate-400 hover:bg-emerald-500 hover:text-white rounded-2xl flex items-center justify-center transition-all border border-slate-100 shadow-sm active:scale-90"
                     >
@@ -100,8 +100,8 @@ const Team: React.FC = () => {
                     </a>
                   )}
                   {member.socials.email && (
-                    <a 
-                      href={`mailto:${member.socials.email}`} 
+                    <a
+                      href={`mailto:${member.socials.email}`}
                       className="w-12 h-12 bg-slate-50 text-slate-400 hover:bg-emerald-500 hover:text-white rounded-2xl flex items-center justify-center transition-all border border-slate-100 shadow-sm active:scale-90"
                     >
                       <Mail size={20} />

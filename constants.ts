@@ -70,70 +70,70 @@ export const PRODUCTS: Product[] = [
     specifications: ['P2O5: 46%', 'High Water Solubility', 'Granular Form']
   },
 
-  // Feed Additives (8)
+  // Fertilizers - Specialized (8)
   {
     id: 'a1',
-    name: 'Lipidin - Feed Supplement',
-    category: Category.FEED_ADDITIVES,
-    description: 'Advanced nutritional supplement from Avitech, enhancing lipid metabolism and growth efficiency. Formulated for high-performance poultry and livestock.',
+    name: 'Lipidin - Agricultural Supplement',
+    category: Category.FERTILIZERS,
+    description: 'Advanced nutritional supplement from Avitech, enhancing plant metabolism and growth efficiency. Formulated for high-performance agriculture.',
     image: asset('assets/portfolio/portfolio-6.jpg'),
-    specifications: ['Lipid metabolism enhancer', 'Growth promoter', 'Highly digestible', 'Member of Keggfarms Group']
+    specifications: ['Metabolism enhancer', 'Growth promoter', 'Highly efficient', 'Member of Keggfarms Group']
   },
   {
     id: 'a2',
-    name: 'Huineng Immunity Boost',
-    category: Category.FEED_ADDITIVES,
-    description: 'Specialized animal health supplement manufactured under strict global quality standards in Zhejiang. Focuses on immunity and yield optimization.',
+    name: 'Huineng Growth Boost',
+    category: Category.FERTILIZERS,
+    description: 'Specialized agricultural supplement manufactured under strict global quality standards in Zhejiang. Focuses on soil health and yield optimization.',
     image: asset('assets/portfolio/portfolio-details-1.jpg'),
-    specifications: ['Veterinary Grade', 'Zhejiang Huineng Brand', 'Immunity Booster', 'GMP Certified']
+    specifications: ['Agricultural Grade', 'Zhejiang Huineng Brand', 'Growth Booster', 'GMP Certified']
   },
   {
     id: 'a3',
     name: 'Pro-Enzyme X Multi',
-    category: Category.FEED_ADDITIVES,
-    description: 'Multi-enzyme complex from VTR Bio-Tech. Enhances digestibility of unconventional feed ingredients.',
+    category: Category.MICRO_NUTRIENTS,
+    description: 'Multi-enzyme complex from VTR Bio-Tech. Enhances nutrient availability in diverse soil conditions.',
     image: asset('assets/portfolio/portfolio-details-2.jpg'),
     specifications: ['Xylanase', 'Beta-Glucanase', 'Cellulase', 'Protease']
   },
   {
     id: 'a4',
-    name: 'Amino-Grow L-Lysine',
-    category: Category.FEED_ADDITIVES,
-    description: 'Essential amino acid supplement for optimizing protein synthesis in broiler chickens and swine.',
+    name: 'Amino-Grow Ultra',
+    category: Category.MICRO_NUTRIENTS,
+    description: 'Essential amino acid supplement for optimizing plant growth and yield.',
     image: asset('assets/portfolio/portfolio-details-3.jpg'),
-    specifications: ['L-Lysine HCl: 98.5%', 'Feed Grade', 'Dust Free Granules']
+    specifications: ['High Purity', 'Agricultural Grade', 'Fast Absorption']
   },
   {
     id: 'a5',
     name: 'Bio-Tox Binder Ultra',
-    category: Category.FEED_ADDITIVES,
-    description: 'High-capacity mycotoxin binder that protects livestock from contaminated feed and improves gut health.',
+    category: Category.MICRO_NUTRIENTS,
+    description: 'High-capacity soil conditioner that protects crops from soil-borne toxins and improves health.',
     image: asset('assets/portfolio/portfolio-1.jpg'),
-    specifications: ['Broad Spectrum Binding', 'HSCAS Base', 'Yeast Cell Wall Enriched']
+    specifications: ['Broad Spectrum Protection', 'Natural Base', 'Mineral Enriched']
   },
   {
     id: 'a6',
-    name: 'Vita-Shell D3 Plus',
-    category: Category.FEED_ADDITIVES,
-    description: 'Concentrated Vitamin D3 and Electrolyte mix for improving eggshell quality in layer birds.',
+    name: 'Vita-Grow D3 Plus',
+    category: Category.MICRO_NUTRIENTS,
+    description: 'Concentrated nutrient mix for improving crop resilience and growth.',
     image: asset('assets/portfolio/portfolio-2.jpg'),
-    specifications: ['Vit D3: 500,000 IU', 'Calcium Gluconate', 'Water Soluble']
+    specifications: ['Enhanced with D3', 'Potassium Enriched', 'Water Soluble']
   },
   {
     id: 'a7',
     name: 'Choline Guard 60',
-    category: Category.FEED_ADDITIVES,
-    description: 'Essential nutrient for fat metabolism and preventing fatty liver syndrome in poultry.',
+    category: Category.MICRO_NUTRIENTS,
+    description: 'Essential nutrient for plant metabolism and preventing nutrient deficiencies.',
     image: asset('assets/portfolio/portfolio-3.jpg'),
-    specifications: ['Choline Chloride: 60%', 'Corn Cob Carrier', 'High Bioavailability']
+    specifications: ['Choline Chloride: 60%', 'Carrier Based', 'High Bioavailability']
   },
   {
     id: 'a8',
-    name: 'Opti-Gut Prebiotic',
-    category: Category.FEED_ADDITIVES,
-    description: 'High-quality mannan-oligosaccharides to support beneficial gut microflora and inhibit pathogen attachment.',
+    name: 'Opti-Soil Prebiotic',
+    category: Category.MICRO_NUTRIENTS,
+    description: 'High-quality prebiotics to support beneficial soil microflora and inhibit pathogens.',
     image: asset('assets/portfolio/portfolio-4.jpg'),
-    specifications: ['MOS: 40%', 'Beta-Glucan: 30%', 'Heat Stable']
+    specifications: ['Microbial Support', 'Heat Stable']
   },
 
   // Minerals (4)
@@ -178,7 +178,7 @@ export const TEAM: TeamMember[] = [
     role: 'Chief Executive Officer',
     image: asset('assets/team/team-1.jpg'),
     bio: 'Visionary leader with 35+ years of experience. Former specialist at Biman Poultry Complex since 1987. Architect of AR Group\'s success.',
-    socials: { linkedin: '#', email: 'atiar@aranimalhealthltd.com' }
+    socials: { linkedin: '#', email: 'atiar@arfertile.com' }
   },
   {
     id: 'research-lead',
@@ -186,7 +186,7 @@ export const TEAM: TeamMember[] = [
     role: 'Lead Researcher',
     image: asset('assets/team/team-2.jpg'),
     bio: 'With a Ph.D. in Agricultural Sciences, Dr. Lau leads our R&D initiatives, focusing on sustainable nutrient delivery systems.',
-    socials: { linkedin: '#', email: 'michael.lau@aranimalhealthltd.com' }
+    socials: { linkedin: '#', email: 'michael.lau@arfertile.com' }
   },
   {
     id: 'ops-director',
@@ -202,7 +202,7 @@ export const TEAM: TeamMember[] = [
     role: 'Technical Support Head',
     image: asset('assets/team/team-4.jpg'),
     bio: 'Faisal bridges the gap between our high-tech products and farm-level implementation with expert diagnostic support.',
-    socials: { linkedin: '#', email: 'faisal.ahmed@aranimalhealthltd.com' }
+    socials: { linkedin: '#', email: 'faisal.ahmed@arfertile.com' }
   }
 ];
 
@@ -210,7 +210,7 @@ export const GALLERY: GalleryItem[] = [
   { id: 'g1', title: 'State-of-the-art Production', category: 'Facilities', image: asset('assets/portfolio/portfolio-1.jpg') },
   { id: 'g2', title: 'Global Logistics Hub', category: 'Facilities', image: asset('assets/portfolio/portfolio-2.jpg') },
   { id: 'g3', title: 'Smart Farming Dashboard', category: 'Innovation', image: asset('assets/portfolio/portfolio-3.jpg') },
-  { id: 'g4', title: 'Poultry Health Research', category: 'Innovation', image: asset('assets/portfolio/portfolio-4.jpg') },
+  { id: 'g4', title: 'Soil Health Research', category: 'Innovation', image: asset('assets/portfolio/portfolio-4.jpg') },
   { id: 'g5', title: 'R&D Center Laboratory', category: 'Science', image: asset('assets/portfolio/portfolio-5.jpg') },
   { id: 'g6', title: 'Sustainable Field Trials', category: 'Environment', image: asset('assets/portfolio/portfolio-6.jpg') }
 ];
@@ -222,8 +222,8 @@ export const HERO_SLIDES = [
     image: asset('assets/slide/slide-1.jpg')
   },
   {
-    title: "Advanced Feed Biotechnology",
-    subtitle: "Pioneering the market with high-efficiency enzymes and pharmaceutical-grade poultry additives.",
+    title: "Advanced Bio-Agriculture",
+    subtitle: "Pioneering the market with high-efficiency enzymes and pharmaceutical-grade agricultural additives.",
     image: asset('assets/slide/slide-2.jpg')
   }
 ];
@@ -236,12 +236,12 @@ export const PARTNER_DETAILS = [
   },
   {
     name: 'VTR Bio-Tech',
-    desc: 'Largest professional animal feed enzyme manufacturer in China. 18+ years of experience in bioengineering and natural medicine extraction.',
+    desc: 'Largest professional agricultural enzyme manufacturer in China. 18+ years of experience in bioengineering and natural nutrient extraction.',
     logo: asset('assets/clients/client-2.png')
   },
   {
     name: 'ESIGMA Health',
-    desc: 'Chinese leader in pharmaceutical additives since 1997. Specializing in anticoccidial products with GMP approved facilities.',
+    desc: 'Chinese leader in agricultural additives since 1997. Specializing in soil health and growth enhancers with GMP approved facilities.',
     logo: asset('assets/clients/client-3.png')
   }
 ];
@@ -251,7 +251,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: '1',
     title: "The Future of Phosphate in Soil Nutrition",
     excerpt: "Discover how deep processing of phosphorus resources is revolutionizing agricultural yield across Southeast Asia.",
-    content: "Phosphorus is a cornerstone of modern agriculture. At AR Fertilizer Ltd, we are partnering with global leaders like Sichuan Chanhen to bring high-purity MCP and MDCP to the local market. Our research shows that optimized mineral intake in livestock significantly boosts health and productivity...",
+    content: "Phosphorus is a cornerstone of modern agriculture. At AR Fertilizer Limited, we are partnering with global leaders like Sichuan Chanhen to bring high-purity MCP and MDCP to the local market. Our research shows that optimized mineral intake in agriculture significantly boosts crop health and productivity...",
     date: "Jan 12, 2024",
     author: "Dr. Michael Lau",
     image: asset('assets/portfolio/portfolio-1.jpg'),
@@ -259,9 +259,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: '2',
-    title: "Optimizing Poultry Health with Bio-Enzymes",
+    title: "Optimizing Crop Yield with Bio-Enzymes",
     excerpt: "New studies show that feed additives containing targeted enzymes can improve feed conversion ratios by up to 15%.",
-    content: "Bio-engineering in poultry feed is no longer a luxury but a necessity for sustainable farming. Guangdong VTR Bio-Tech has pioneered enzymatic solutions that ensure better nutrient absorption. By integrating these solutions, farmers can expect a significant reduction in waste and cost...",
+    content: "Bio-engineering in agriculture is no longer a luxury but a necessity for sustainable farming. Guangdong VTR Bio-Tech has pioneered enzymatic solutions that ensure better nutrient absorption. By integrating these solutions, farmers can expect a significant reduction in waste and cost...",
     date: "Feb 05, 2024",
     author: "Atiar Rahman",
     image: asset('assets/portfolio/portfolio-2.jpg'),
@@ -270,7 +270,7 @@ export const BLOG_POSTS: BlogPost[] = [
 ];
 
 export const MILESTONES = [
-  { year: '2010', title: 'Founding Year', description: 'AR Animal Health Ltd established to fill the gap in high-tech agricultural supplies.', icon: 'Flag' },
+  { year: '2010', title: 'Founding Year', description: 'AR Fertilizer Limited established to fill the gap in high-tech agricultural supplies.', icon: 'Flag' },
   { year: '2013', title: 'Strategic Alliance', description: 'Became the primary distributor of Asia\'s leading Monocalcium Phosphate brand.', icon: 'Globe' },
   { year: '2023', title: 'Biotech Hub', description: 'Launched a dedicated technical support app for farmers.', icon: 'Zap' }
 ];
