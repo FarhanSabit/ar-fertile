@@ -61,14 +61,14 @@ const Home: React.FC = () => {
               <span className="text-brand-maroon font-bold tracking-widest uppercase text-sm mb-4 block">Featured Showcase</span>
               <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">High-Performance Products</h2>
 
-              {/* Category Filter - Industry Standard Responsive Approach */}
+              {/* Category Filter - Ultra Compact for Desktop/Tablet (>756px) */}
               <div className="mt-8">
-                <div className="flex flex-nowrap md:flex-wrap items-center gap-3 overflow-x-auto no-scrollbar -mx-6 px-6 md:mx-0 md:px-0 pb-4 md:pb-0">
+                <div className="flex flex-nowrap items-center gap-2 md:gap-3 overflow-x-auto no-scrollbar -mx-6 px-6 md:mx-0 md:px-0 pb-4 min-[756px]:pb-0 min-[756px]:overflow-x-visible">
                   {categories.map((cat) => (
                     <button
                       key={cat}
                       onClick={() => setActiveCategory(cat as any)}
-                      className={`px-6 py-2.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest transition-all shrink-0 ${activeCategory === cat
+                      className={`px-4 py-2 md:px-6 md:py-2.5 rounded-full text-[9px] md:text-[10px] lg:text-xs font-black uppercase tracking-widest transition-all shrink-0 ${activeCategory === cat
                           ? 'bg-brand-maroon text-white shadow-lg shadow-brand-maroon/20 scale-105'
                           : 'bg-white text-slate-500 hover:bg-slate-100 border border-slate-200 hover:border-brand-maroon/30'
                         }`}

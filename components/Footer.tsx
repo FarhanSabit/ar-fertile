@@ -3,16 +3,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   Facebook, Twitter, Linkedin, Instagram, Mail,
-  MapPin, PhoneCall
+  MapPin, PhoneCall, ChevronRight
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white pt-24 pb-12">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
-          {/* Company Brand */}
-          <div className="flex flex-col">
+        {/* Main Footer Grid with Custom Breakpoints */}
+        <div className="grid grid-cols-1 md:grid-cols-2 min-[756px]:grid-cols-3 gap-16 mb-20">
+
+          {/* Column 1: Company Brand & Socials */}
+          <div className="flex flex-col min-[666px]:col-span-1">
             <div className="flex items-center space-x-3 mb-8 group">
               <div className="bg-white rounded-xl p-2 shadow-lg group-hover:rotate-3 transition-transform">
                 <img
@@ -26,7 +28,7 @@ const Footer: React.FC = () => {
                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-500">Innovation in Agriculture</span>
               </div>
             </div>
-            <p className="text-slate-400 mb-10 leading-relaxed font-medium max-w-lg">
+            <p className="text-slate-400 mb-10 leading-relaxed font-medium">
               An innovative company leading the phosphorus chemical industry in Bangladesh since 2010.
             </p>
             <div className="flex space-x-5">
@@ -49,36 +51,50 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Official Contact Info */}
-          <div className="flex flex-col justify-between">
-            <div>
-              <h4 className="text-lg font-black mb-8 border-b-2 border-emerald-500/20 pb-3 inline-block tracking-tight">Get In Touch</h4>
-              <ul className="space-y-8">
-                <li className="flex items-start space-x-5 group">
-                  <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all">
-                    <MapPin size={20} />
-                  </div>
-                  <span className="text-slate-400 text-sm leading-relaxed font-medium">House-51, Flat: A-7 (7th Floor), Rabindra Sarani Road, Sector-3, Uttara, Dhaka-1230, Bangladesh</span>
+          {/* Column 2: Quick Navigation (Restored per instruction) */}
+          <div className="min-[666px]:col-span-1">
+            <h4 className="text-lg font-black mb-8 border-b-2 border-emerald-500/20 pb-3 inline-block tracking-tight">Quick Navigation</h4>
+            <ul className="grid grid-cols-1 gap-4">
+              {['Home', 'About', 'Products', 'Gallery', 'Contact'].map((item) => (
+                <li key={item}>
+                  <Link
+                    to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                    className="text-slate-400 hover:text-emerald-500 flex items-center space-x-3 transition-all group font-medium"
+                  >
+                    <ChevronRight size={14} className="text-emerald-500 group-hover:translate-x-1 transition-transform" />
+                    <span>{item}</span>
+                  </Link>
                 </li>
-                <li className="flex items-center space-x-5 group">
-                  <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all">
-                    <PhoneCall size={20} />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-slate-400 text-sm font-bold">+88-02-58951859</span>
-                    <span className="text-slate-500 text-xs font-bold">Hotline: +88 01713-011040</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="mt-8 pt-8 border-t border-slate-800/50">
-              <a href="mailto:info@arfertile.com" className="flex items-center space-x-4 group">
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Get In Touch (Full width on medium screens to achieve 2-row layout between 666-756px) */}
+          <div className="min-[666px]:col-span-2 min-[756px]:col-span-1">
+            <h4 className="text-lg font-black mb-8 border-b-2 border-emerald-500/20 pb-3 inline-block tracking-tight">Get In Touch</h4>
+            <ul className="space-y-8">
+              <li className="flex items-start space-x-5 group">
+                <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                  <MapPin size={20} />
+                </div>
+                <span className="text-slate-400 text-sm leading-relaxed font-medium">House-51, Flat: A-7 (7th Floor), Rabindra Sarani Road, Sector-3, Uttara, Dhaka-1230, Bangladesh</span>
+              </li>
+              <li className="flex items-center space-x-5 group">
+                <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                  <PhoneCall size={20} />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-slate-400 text-sm font-bold">+88-02-58951859</span>
+                  <span className="text-slate-500 text-xs font-bold">Hotline: +88 01713-011040</span>
+                </div>
+              </li>
+              <li className="flex items-center space-x-5 group pt-4 border-t border-slate-800/50">
                 <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 group-hover:bg-emerald-600 group-hover:text-white transition-all">
                   <Mail size={20} />
                 </div>
                 <span className="text-slate-400 group-hover:text-emerald-500 transition-colors font-bold text-sm">info@arfertile.com</span>
-              </a>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -86,10 +102,9 @@ const Footer: React.FC = () => {
         <div className="pt-12 border-t border-slate-800/50 text-center md:flex md:justify-between md:text-left text-slate-500 text-xs font-black uppercase tracking-[0.2em]">
           <p>© 2024 AR FERTILIZER LIMITED. ALL RIGHTS RESERVED.</p>
           <div className="mt-6 md:mt-0 flex items-center justify-center space-x-8">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <Link to="/about" className="hover:text-white transition-colors">About</Link>
-            <Link to="/products" className="hover:text-white transition-colors">Products</Link>
-            <Link to="/contact" className="hover:text-white transition-colors">Contact</Link>
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Compliance</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Trade</a>
           </div>
         </div>
       </div>

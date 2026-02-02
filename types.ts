@@ -3,7 +3,7 @@ export enum Category {
   FERTILIZERS = 'Fertilizers',
   MICRO_NUTRIENTS = 'Micro-nutrients',
   MINERALS = 'Minerals',
-  AGRO_MACHINERIES = 'Agro Machineries'
+  AGRO_MACHINERIES = 'Mechineries'
 }
 
 export interface Product {

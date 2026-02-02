@@ -171,7 +171,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'am1',
-    name: 'Advanced Agro Machinery',
+    name: 'Advanced Mechinery',
     category: Category.AGRO_MACHINERIES,
     description: 'Mechanical structures and devices used in farming or other agriculture. Essential for modern mechanized farming to ensure global food security.',
     image: asset('assets/agro-machineries.jpg'),
