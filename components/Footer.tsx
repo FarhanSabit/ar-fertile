@@ -10,11 +10,14 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white pt-24 pb-12">
       <div className="container mx-auto px-6">
-        {/* Main Footer Grid with Custom Breakpoints */}
-        <div className="grid grid-cols-1 md:grid-cols-2 min-[756px]:grid-cols-3 gap-16 mb-20">
+        {/* Main Footer Grid with Complex Responsive Logic */}
+        {/* > 756px: One row, custom 35%/25%/35% widths */}
+        {/* 666px - 756px: Two rows (Brand/Social + Nav on top, Get In Touch on bottom) */}
+        {/* < 666px: Three rows (Stacked) */}
+        <div className="flex flex-col min-[666px]:grid min-[666px]:grid-cols-2 min-[756px]:flex min-[756px]:flex-row min-[756px]:justify-between gap-12 lg:gap-0 mb-20">
 
-          {/* Column 1: Company Brand & Socials */}
-          <div className="flex flex-col min-[666px]:col-span-1">
+          {/* Column 1: Company Brand & Socials (35% on >756px) */}
+          <div className="flex flex-col min-[666px]:col-span-1 min-[756px]:w-[35%] min-[756px]:pr-8">
             <div className="flex items-center space-x-3 mb-8 group">
               <div className="bg-white rounded-xl p-2 shadow-lg group-hover:rotate-3 transition-transform">
                 <img
@@ -51,8 +54,8 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Column 2: Quick Navigation (Restored per instruction) */}
-          <div className="min-[666px]:col-span-1">
+          {/* Column 2: Quick Navigation (25% on >756px) */}
+          <div className="min-[666px]:col-span-1 min-[756px]:w-[25%] min-[756px]:px-4">
             <h4 className="text-lg font-black mb-8 border-b-2 border-emerald-500/20 pb-3 inline-block tracking-tight">Quick Navigation</h4>
             <ul className="grid grid-cols-1 gap-4">
               {['Home', 'About', 'Products', 'Gallery', 'Contact'].map((item) => (
@@ -69,8 +72,8 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 3: Get In Touch (Full width on medium screens to achieve 2-row layout between 666-756px) */}
-          <div className="min-[666px]:col-span-2 min-[756px]:col-span-1">
+          {/* Column 3: Get In Touch (35% on >756px, spans 2 cols on 666-756px) */}
+          <div className="min-[666px]:col-span-2 min-[756px]:col-span-1 min-[756px]:w-[35%] min-[756px]:pl-8">
             <h4 className="text-lg font-black mb-8 border-b-2 border-emerald-500/20 pb-3 inline-block tracking-tight">Get In Touch</h4>
             <ul className="space-y-8">
               <li className="flex items-start space-x-5 group">
