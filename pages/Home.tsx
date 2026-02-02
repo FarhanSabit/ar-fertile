@@ -29,7 +29,7 @@ const Home: React.FC = () => {
             {[
               { icon: Award, title: "Premium Quality", desc: "Rigorous ISO-compliant testing ensures only the highest grade materials reach your farm." },
               { icon: Zap, title: "Biotech Innovation", desc: "Utilizing advanced enzyme technology from world leaders like VTR Bio-Tech." },
-              { icon: ShieldCheck, title: "Trusted Advice", desc: "Consultancy from industry leaders with over 35 years of poultry sector leadership." },
+              { icon: ShieldCheck, title: "Trusted Advice", desc: "Consultancy from industry leaders with over 35 years of agricultural leadership." },
               { icon: Globe, title: "Global Partners", desc: "Strategic alliances with Sichuan Chanhen and Esigma for best-in-class mineral sources." }
             ].map((feature, idx) => (
               <div key={idx} className="bg-white p-10 rounded-[2.5rem] border border-slate-100 hover:border-brand-maroon/30 shadow-sm hover:shadow-2xl hover:shadow-brand-maroon/10 hover:-translate-y-2 transition-all group">

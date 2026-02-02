@@ -41,7 +41,7 @@ export const PRODUCTS: Product[] = [
     id: 'f5',
     name: 'Boron Booster 20',
     category: Category.FERTILIZERS,
-    description: 'Highly soluble boron for correcting deficiencies in high-value horticultural crops and oilseeds.',
+    description: 'বোরন সার একটি অত্যাবশকীয় পুষ্টি উপাদান যা মাটি ও ফসলের গুনগত মান ও ফলন বৃদ্ধি করে। গাছের পাতা সবুজ ও সতেজ করে। শিকড়ের বৃদ্ধি ভালো হয়। দানা জাতীয় ফসলের দানা ও বীজ পুষ্ট হয়। বন্ধ্যাত্ব রোধ করে।',
     image: asset('assets/portfolio/portfolio-2.jpg'),
     specifications: ['Boron: 20%', 'Instant Dissolving', 'Foliar Grade']
   },
@@ -168,6 +168,14 @@ export const PRODUCTS: Product[] = [
     description: 'Ultrafine ground limestone for maximum calcium absorption in high-production layer hens.',
     image: asset('assets/portfolio/portfolio-details-2.jpg'),
     specifications: ['Calcium: 38%', 'Purity: 98%', 'Grit Size: 2-4mm']
+  },
+  {
+    id: 'am1',
+    name: 'Advanced Agro Machinery',
+    category: Category.AGRO_MACHINERIES,
+    description: 'Mechanical structures and devices used in farming or other agriculture. Essential for modern mechanized farming to ensure global food security.',
+    image: asset('assets/agro-machineries.jpg'),
+    specifications: ['High Durability', 'Fuel Efficient', 'Multipurpose Use']
   }
 ];
 
@@ -177,7 +185,7 @@ export const TEAM: TeamMember[] = [
     name: 'Mr. Atiar Rahman',
     role: 'Chief Executive Officer',
     image: asset('assets/team/team-1.jpg'),
-    bio: 'Visionary leader with 35+ years of experience. Former specialist at Biman Poultry Complex since 1987. Architect of AR Group\'s success.',
+    bio: 'Mr. Atiar Rahman possesses over 35 years of vast knowledge in the agricultural sector. Educational qualification: M.Sc (A.H) in Agricultural Science. He started his career at Biman Agriculture Complex as a Production Officer in 1987 and served as Farm Manager until 2005. He has visited USA, Canada, Europe, and Asia to attend numerous agricultural seminars and symposiums.',
     socials: { linkedin: '#', email: 'atiar@arfertile.com' }
   },
   {
@@ -229,21 +237,24 @@ export const HERO_SLIDES = [
 ];
 
 export const PARTNER_DETAILS = [
-  {
-    name: 'Sichuan Chanhen',
-    desc: 'Asia\'s largest supplier of MCP/MKP. Specializing in phosphate rock mining and intensive processing with annual capacity over 700,000 tons.',
-    logo: asset('assets/clients/client-1.png')
-  },
-  {
-    name: 'VTR Bio-Tech',
-    desc: 'Largest professional agricultural enzyme manufacturer in China. 18+ years of experience in bioengineering and natural nutrient extraction.',
-    logo: asset('assets/clients/client-2.png')
-  },
-  {
-    name: 'ESIGMA Health',
-    desc: 'Chinese leader in agricultural additives since 1997. Specializing in soil health and growth enhancers with GMP approved facilities.',
-    logo: asset('assets/clients/client-3.png')
-  }
+  { name: 'JHEJIANG ESIGMA CO. LTD.', desc: 'Chinese leader in agricultural additives specializing in soil health and growth enhancers.', logo: asset('assets/clients/1.jpg') },
+  { name: 'AVITECH NUTRITION PVT LTD', desc: 'Specialists in nutritional supplements and growth promoters for high-performance agriculture.', logo: asset('assets/clients/2.jpg') },
+  { name: 'ZOUPING JUJIA CHOLINE INDUSTRIAL CO. LTD', desc: 'World-class manufacturer of Choline Chloride for agricultural use.', logo: asset('assets/clients/3.jpg') },
+  { name: 'SICHUAN CHEMICAL CORPORATION', desc: 'Leading mineral and chemical provider for specialized agricultural needs.', logo: asset('assets/clients/4.jpg') },
+  { name: 'GUANGDONG VTR BIO-TEC CO. LTD.', desc: 'Largest professional agricultural enzyme manufacturer in China with 18+ years of experience.', logo: asset('assets/clients/5.jpg') },
+  { name: 'YNNAN COPPER INDUSTRY SUNWARD CHEMICALS CO. LTD', desc: 'Specialized mineral producer for micronutrient solutions.', logo: asset('assets/clients/6.jpg') },
+  { name: 'YUNNA XINLONG MINERAL ANIMAL FEED CO. LTD.', desc: 'Chemical division of the New Hope Group, focusing on mineral nutrition.', logo: asset('assets/clients/1.jpg') },
+  { name: 'HENGYI VET CO. LTD', desc: 'Partner for veterinary and agricultural health solutions.', logo: asset('assets/clients/2.jpg') },
+  { name: 'INTEGRATED WORLD ENTERPRISE (INTEWE)', desc: 'Global strategic partner for agricultural distribution.', logo: asset('assets/clients/3.jpg') },
+  { name: 'YUNNAN XINLONG MINERAL FEED', desc: 'Specialized supplier of mineral-based feed and crop additives.', logo: asset('assets/clients/4.jpg') },
+  { name: 'ZHEJIANG SHENGHUA BIOK BIOLOGY', desc: 'Innovative biological solutions provider for agriculture.', logo: asset('assets/clients/5.jpg') }
+];
+
+export const HOTLINES = [
+  '+88 01777-703243',
+  '+88 01777-703241',
+  '+88 01777-703242',
+  '+88 01777-703240'
 ];
 
 export const BLOG_POSTS: BlogPost[] = [

@@ -5,6 +5,7 @@ import {
   Facebook, Twitter, Linkedin, Instagram, Mail,
   MapPin, PhoneCall, ChevronRight, Send
 } from 'lucide-react';
+import { HOTLINES } from '../constants';
 
 const Footer: React.FC = () => {
   return (
@@ -47,6 +48,26 @@ const Footer: React.FC = () => {
                 </a>
               ))}
             </div>
+          </div>
+
+          {/* Hotline Numbers */}
+          <div>
+            <h4 className="text-white font-black text-sm uppercase tracking-[0.2em] mb-8 relative">
+              Hotline Numbers
+              <span className="absolute -bottom-3 left-0 w-8 h-1 bg-emerald-600 rounded-full"></span>
+            </h4>
+            <ul className="space-y-4">
+              {HOTLINES.map((hotline, idx) => (
+                <li key={idx} className="flex items-center space-x-3 group">
+                  <div className="w-8 h-8 bg-slate-800/50 rounded-lg flex items-center justify-center text-emerald-500 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                    <PhoneCall size={16} />
+                  </div>
+                  <a href={`tel:${hotline.replace(/[^0-9]/g, '')}`} className="text-slate-400 hover:text-emerald-500 transition-colors font-bold text-sm">
+                    {hotline}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Navigation Links */}

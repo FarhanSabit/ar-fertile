@@ -192,29 +192,6 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Other Leaders */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
-            {TEAM.slice(1).map((member) => (
-              <div key={member.id} className="group flex flex-col items-center text-center">
-                <div className="relative w-64 h-64 mb-10">
-                  <div className="absolute inset-0 bg-emerald-600 rounded-[3rem] rotate-6 group-hover:rotate-12 transition-transform duration-700"></div>
-                  <div className="relative w-full h-full overflow-hidden rounded-[3rem] shadow-2xl border-4 border-white">
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-black text-slate-900 mb-2 tracking-tight">{member.name}</h3>
-                <p className="text-emerald-600 font-black tracking-widest uppercase text-[10px] mb-6">{member.role}</p>
-                <div className="flex items-center justify-center space-x-4">
-                  {member.socials.linkedin && (
-                    <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-50 text-slate-400 hover:bg-emerald-600 hover:text-white rounded-xl flex items-center justify-center transition-all border border-slate-100 shadow-sm active:scale-90"><Linkedin size={18} /></a>
-                  )}
-                  {member.socials.twitter && (
-                    <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-50 text-slate-400 hover:bg-emerald-500 hover:text-white rounded-xl flex items-center justify-center transition-all border border-slate-100 shadow-sm active:scale-90"><Twitter size={18} /></a>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
