@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <p className="text-slate-400 mb-10 leading-relaxed font-medium">
-              A young and innovative company leading the phosphorus chemical industry in Bangladesh since 2010.
+              An innovative company leading the phosphorus chemical industry in Bangladesh since 2010.
             </p>
             <div className="flex space-x-5">
               {[
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-black mb-8 border-b-2 border-emerald-500/20 pb-3 inline-block tracking-tight">Quick Navigation</h4>
             <ul className="grid grid-cols-1 gap-5">
-              {['Home', 'About', 'Products', 'Gallery', 'Team', 'Contact'].map((item) => (
+              {['Home', 'About', 'Products', 'Gallery', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link
                     to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Award, Zap, ShieldCheck, Globe, ArrowRight,
@@ -8,8 +8,17 @@ import {
 } from 'lucide-react';
 import HeroSlider from '../components/HeroSlider';
 import { PRODUCTS, TEAM, PARTNER_DETAILS } from '../constants';
+import { Category } from '../types';
 
 const Home: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState<Category | 'All'>('All');
+
+  const categories = ['All', ...Object.values(Category)];
+
+  const filteredProducts = activeCategory === 'All'
+    ? PRODUCTS.slice(0, 8)
+    : PRODUCTS.filter(p => p.category === activeCategory).slice(0, 8);
+
   return (
     <div className="overflow-hidden">
       <HeroSlider />
@@ -44,33 +53,68 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Partners Highlight */}
+      {/* Products Showcase (Replaced Partners) */}
       <section className="py-12 md:py-24 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16">
             <div className="max-w-xl text-center md:text-left w-full">
-              <span className="text-brand-maroon font-bold tracking-widest uppercase text-sm mb-4 block">Our Partners</span>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">World Leaders in Agriculture</h2>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {PARTNER_DETAILS.map((p, idx) => (
-              <div key={idx} className="group relative bg-white h-64 rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-500">
-                {/* Background Image / Logo */}
-                <div className="absolute inset-0 flex items-center justify-center p-8 bg-white transition-transform duration-700 group-hover:scale-110">
-                  <img
-                    src={p.logo}
-                    alt={p.name}
-                    className="w-full h-full object-contain opacity-90 group-hover:opacity-100"
-                  />
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-maroon/90 via-brand-maroon/80 to-brand-maroon/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transform duration-300">
-                  <h4 className="text-2xl font-black text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">{p.name}</h4>
-                  <p className="text-brand-gold text-xs font-bold uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">Global Provider</p>
-                </div>
+              <span className="text-brand-maroon font-bold tracking-widest uppercase text-sm mb-4 block">Featured Showcase</span>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">High-Performance Products</h2>
+              <div className="flex flex-wrap gap-2 mt-8 justify-center md:justify-start">
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat as any)}
+                    className={`px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all ${activeCategory === cat
+                        ? 'bg-brand-maroon text-white shadow-lg shadow-brand-maroon/20 scale-105'
+                        : 'bg-white text-slate-500 hover:bg-slate-100 border border-slate-200'
+                      }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
               </div>
+            </div>
+            <Link to="/products" className="group flex items-center space-x-2 text-brand-maroon font-bold text-lg mt-8 md:mt-0">
+              <span>View Full Catalog</span>
+              <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {filteredProducts.map((product) => (
+              <Link
+                key={product.id}
+                to={`/products?id=${product.id}`}
+                className="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute top-6 left-6">
+                    <span className="bg-white/90 backdrop-blur-sm text-slate-900 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full shadow-lg">
+                      {product.category}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8 flex flex-col flex-grow">
+                  <h4 className="text-xl font-black text-slate-900 mb-4 group-hover:text-brand-maroon transition-colors leading-tight">
+                    {product.name}
+                  </h4>
+                  <p className="text-slate-500 text-sm font-medium leading-relaxed mb-6 line-clamp-2">
+                    {product.description}
+                  </p>
+                  <div className="mt-auto flex items-center justify-between">
+                    <span className="text-brand-maroon font-bold text-sm flex items-center group-hover:translate-x-1 transition-transform">
+                      Details <ArrowRight size={16} className="ml-2" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -131,7 +175,7 @@ const Home: React.FC = () => {
               <span className="text-brand-maroon font-bold tracking-widest uppercase text-sm mb-4 block">About AR Fertilizer</span>
               <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">Dedicated to Agricultural & Nutritional Excellence</h2>
               <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-                Starting in 2010, AR Fertilizer Limited has grown into a cornerstone of Bangladesh's agricultural sector. We combine deep local expertise with world-class scientific partnerships.
+                Since 2010, AR Fertilizer Limited has grown into a cornerstone of Bangladesh's agricultural sector. We combine deep local expertise with world-class scientific partnerships to ensure national prosperity.
               </p>
               <ul className="space-y-4 mb-10">
                 {["Pioneering agricultural innovation", "Strategic partnerships with Sichuan Chanhen & VTR", "Data-driven scientific nutrition approach", "Committed to sustainable national food security"].map((item, idx) => (
@@ -197,10 +241,11 @@ const Home: React.FC = () => {
                   </Link>
                   <Link
                     to="/contact"
-                    className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-10 py-5 rounded-[2rem] font-black text-lg flex items-center space-x-3 transition-all active:scale-95"
+                    className="group bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-10 py-5 rounded-[2rem] font-black text-lg flex items-center space-x-3 transition-all active:scale-95"
                   >
                     <MessageSquare size={22} />
                     <span>Contact Sales</span>
+                    <ArrowRight size={22} className="group-hover:translate-x-2 transition-transform opacity-0 group-hover:opacity-100" />
                   </Link>
                 </div>
               </div>

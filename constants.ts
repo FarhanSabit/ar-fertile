@@ -10,7 +10,7 @@ export const PRODUCTS: Product[] = [
     name: 'NPK 15-15-15 Plus',
     category: Category.FERTILIZERS,
     description: 'A premium balanced fertilizer designed for general crop growth and soil revitalization. Optimized for maximum absorption in diverse soil conditions.',
-    image: asset('assets/portfolio/portfolio-7.jpg'),
+    image: asset('assets/portfolio/portfolio-details-1.jpg'),
     specifications: ['Nitrogen: 15%', 'Phosphorus: 15%', 'Potassium: 15%', 'Enhanced with Micro-nutrients']
   },
   {
@@ -18,7 +18,7 @@ export const PRODUCTS: Product[] = [
     name: 'Urea Diamond Grade',
     category: Category.FERTILIZERS,
     description: 'High-nitrogen fertilizer essential for the vegetative growth phase of crops. Provides a quick boost to leaf and stem development.',
-    image: asset('assets/portfolio/portfolio-8.jpg'),
+    image: asset('assets/portfolio/portfolio-details-2.jpg'),
     specifications: ['Nitrogen: 46%', 'Slow Release Formula', 'Industrial Grade Purity']
   },
   {
@@ -26,7 +26,7 @@ export const PRODUCTS: Product[] = [
     name: 'DAP Power Gold',
     category: Category.FERTILIZERS,
     description: 'Diammonium Phosphate formulated for strong root development and winter hardiness. Essential for cereal crops and orchards.',
-    image: asset('assets/portfolio/portfolio-9.jpg'),
+    image: asset('assets/portfolio/portfolio-details-3.jpg'),
     specifications: ['N: 18%', 'P2O5: 46%', 'High Water Solubility', 'Fast Acting']
   },
   {
@@ -84,7 +84,7 @@ export const PRODUCTS: Product[] = [
     name: 'Huineng Growth Boost',
     category: Category.FERTILIZERS,
     description: 'Specialized agricultural supplement manufactured under strict global quality standards in Zhejiang. Focuses on soil health and yield optimization.',
-    image: asset('assets/portfolio/portfolio-details-1.jpg'),
+    image: asset('assets/portfolio/portfolio-7.jpg'),
     specifications: ['Agricultural Grade', 'Zhejiang Huineng Brand', 'Growth Booster', 'GMP Certified']
   },
   {
@@ -92,7 +92,7 @@ export const PRODUCTS: Product[] = [
     name: 'Pro-Enzyme X Multi',
     category: Category.MICRO_NUTRIENTS,
     description: 'Multi-enzyme complex from VTR Bio-Tech. Enhances nutrient availability in diverse soil conditions.',
-    image: asset('assets/portfolio/portfolio-details-2.jpg'),
+    image: asset('assets/portfolio/portfolio-8.jpg'),
     specifications: ['Xylanase', 'Beta-Glucanase', 'Cellulase', 'Protease']
   },
   {
@@ -100,7 +100,7 @@ export const PRODUCTS: Product[] = [
     name: 'Amino-Grow Ultra',
     category: Category.MICRO_NUTRIENTS,
     description: 'Essential amino acid supplement for optimizing plant growth and yield.',
-    image: asset('assets/portfolio/portfolio-details-3.jpg'),
+    image: asset('assets/portfolio/portfolio-9.jpg'),
     specifications: ['High Purity', 'Agricultural Grade', 'Fast Absorption']
   },
   {
@@ -116,7 +116,7 @@ export const PRODUCTS: Product[] = [
     name: 'Vita-Grow D3 Plus',
     category: Category.MICRO_NUTRIENTS,
     description: 'Concentrated nutrient mix for improving crop resilience and growth.',
-    image: asset('assets/portfolio/portfolio-2.jpg'),
+    image: asset('assets/about.jpg'),
     specifications: ['Enhanced with D3', 'Potassium Enriched', 'Water Soluble']
   },
   {
@@ -124,7 +124,7 @@ export const PRODUCTS: Product[] = [
     name: 'Choline Guard 60',
     category: Category.MICRO_NUTRIENTS,
     description: 'Essential nutrient for plant metabolism and preventing nutrient deficiencies.',
-    image: asset('assets/portfolio/portfolio-3.jpg'),
+    image: asset('assets/portfolio/portfolio-details-1.jpg'),
     specifications: ['Choline Chloride: 60%', 'Carrier Based', 'High Bioavailability']
   },
   {
@@ -132,7 +132,7 @@ export const PRODUCTS: Product[] = [
     name: 'Opti-Soil Prebiotic',
     category: Category.MICRO_NUTRIENTS,
     description: 'High-quality prebiotics to support beneficial soil microflora and inhibit pathogens.',
-    image: asset('assets/portfolio/portfolio-4.jpg'),
+    image: asset('assets/portfolio/portfolio-details-2.jpg'),
     specifications: ['Microbial Support', 'Heat Stable']
   },
 
@@ -142,7 +142,7 @@ export const PRODUCTS: Product[] = [
     name: 'Loong Dicalcium Phosphate',
     category: Category.MINERALS,
     description: 'High-purity feed-grade mineral powder from Sichuan Chanhen, essential for bone development and overall metabolic health.',
-    image: asset('assets/portfolio/portfolio-5.jpg'),
+    image: asset('assets/portfolio/portfolio-details-3.jpg'),
     specifications: ['Phosphorus: 18% min', 'Calcium: 21% min', 'Feed Grade Powder', 'Certified Asian Leader']
   },
   {
@@ -150,7 +150,7 @@ export const PRODUCTS: Product[] = [
     name: 'MCP Mono-Calcium 22',
     category: Category.MINERALS,
     description: 'High-solubility phosphorus source for starter diets and aquaculture applications.',
-    image: asset('assets/portfolio/portfolio-6.jpg'),
+    image: asset('assets/portfolio/portfolio-5.jpg'),
     specifications: ['Total P: 22.7%', 'Water Soluble P: 20%', 'Fine Granule']
   },
   {
@@ -158,15 +158,15 @@ export const PRODUCTS: Product[] = [
     name: 'Trace Mineral Premix-P',
     category: Category.MINERALS,
     description: 'Custom blend of essential minerals for poultry including Fe, Mn, Zn, Cu, and I.',
-    image: asset('assets/portfolio/portfolio-details-1.jpg'),
-    specifications: ['Poultry Specific', 'Consistent Particle Size', 'Non-Reactive Carrier']
+    image: asset('assets/portfolio/portfolio-6.jpg'),
+    specifications: ['Agricultural Specific', 'Consistent Particle Size', 'Non-Reactive Carrier']
   },
   {
     id: 'm4',
     name: 'Bone-Strength Calcium Carbonate',
     category: Category.MINERALS,
-    description: 'Ultrafine ground limestone for maximum calcium absorption in high-production layer hens.',
-    image: asset('assets/portfolio/portfolio-details-2.jpg'),
+    description: 'Ultrafine ground limestone for maximum calcium absorption across high-performance crops.',
+    image: asset('assets/portfolio/portfolio-7.jpg'),
     specifications: ['Calcium: 38%', 'Purity: 98%', 'Grit Size: 2-4mm']
   },
   {
@@ -187,40 +187,22 @@ export const TEAM: TeamMember[] = [
     image: asset('assets/team/team-1.jpg'),
     bio: 'Mr. Atiar Rahman possesses over 35 years of vast knowledge in the agricultural sector. Educational qualification: M.Sc (A.H) in Agricultural Science. He started his career at Biman Agriculture Complex as a Production Officer in 1987 and served as Farm Manager until 2005. He has visited USA, Canada, Europe, and Asia to attend numerous agricultural seminars and symposiums.',
     socials: { linkedin: '#', email: 'atiar@arfertile.com' }
-  },
-  {
-    id: 'research-lead',
-    name: 'Dr. Michael Lau',
-    role: 'Lead Researcher',
-    image: asset('assets/team/team-2.jpg'),
-    bio: 'With a Ph.D. in Agricultural Sciences, Dr. Lau leads our R&D initiatives, focusing on sustainable nutrient delivery systems.',
-    socials: { linkedin: '#', email: 'michael.lau@arfertile.com' }
-  },
-  {
-    id: 'ops-director',
-    name: 'Sarah Jenkins',
-    role: 'Director of Operations',
-    image: asset('assets/team/team-3.jpg'),
-    bio: 'Sarah oversees our supply chain and global partnerships, ensuring seamless logistics from our international manufacturing hubs.',
-    socials: { linkedin: '#', twitter: '#' }
-  },
-  {
-    id: 'tech-support',
-    name: 'Engr. Faisal Ahmed',
-    role: 'Technical Support Head',
-    image: asset('assets/team/team-4.jpg'),
-    bio: 'Faisal bridges the gap between our high-tech products and farm-level implementation with expert diagnostic support.',
-    socials: { linkedin: '#', email: 'faisal.ahmed@arfertile.com' }
   }
 ];
 
 export const GALLERY: GalleryItem[] = [
-  { id: 'g1', title: 'State-of-the-art Production', category: 'Facilities', image: asset('assets/portfolio/portfolio-1.jpg') },
-  { id: 'g2', title: 'Global Logistics Hub', category: 'Facilities', image: asset('assets/portfolio/portfolio-2.jpg') },
-  { id: 'g3', title: 'Smart Farming Dashboard', category: 'Innovation', image: asset('assets/portfolio/portfolio-3.jpg') },
-  { id: 'g4', title: 'Soil Health Research', category: 'Innovation', image: asset('assets/portfolio/portfolio-4.jpg') },
-  { id: 'g5', title: 'R&D Center Laboratory', category: 'Science', image: asset('assets/portfolio/portfolio-5.jpg') },
-  { id: 'g6', title: 'Sustainable Field Trials', category: 'Environment', image: asset('assets/portfolio/portfolio-6.jpg') }
+  { id: 'g1', title: 'Global Operations Center', category: 'Facilities', image: asset('assets/portfolio/portfolio-1.jpg') },
+  { id: 'g2', title: 'Distribution Network', category: 'Logistics', image: asset('assets/portfolio/portfolio-2.jpg') },
+  { id: 'g3', title: 'Modern Storage Solutions', category: 'Facilities', image: asset('assets/portfolio/portfolio-3.jpg') },
+  { id: 'g4', title: 'Soil Fertility Research', category: 'Innovation', image: asset('assets/portfolio/portfolio-4.jpg') },
+  { id: 'g5', title: 'Technical Lab Analysis', category: 'Science', image: asset('assets/portfolio/portfolio-5.jpg') },
+  { id: 'g6', title: 'Field Trial Monitoring', category: 'Environment', image: asset('assets/portfolio/portfolio-6.jpg') },
+  { id: 'g7', title: 'Technical Advisory Board', category: 'Experience', image: asset('assets/team/team-2.jpg') },
+  { id: 'g8', title: 'Expert Diagnostic Services', category: 'Advisory', image: asset('assets/team/team-3.jpg') },
+  { id: 'g9', title: 'Logistics Management', category: 'Team', image: asset('assets/team/team-4.jpg') },
+  { id: 'g10', title: 'Product Quality Control', category: 'Testing', image: asset('assets/portfolio/portfolio-7.jpg') },
+  { id: 'g11', title: 'Strategic Planning Meet', category: 'Corporate', image: asset('assets/portfolio/portfolio-8.jpg') },
+  { id: 'g12', title: 'Sustainable Farming Future', category: 'Innovation', image: asset('assets/portfolio/portfolio-9.jpg') }
 ];
 
 export const HERO_SLIDES = [
@@ -233,21 +215,26 @@ export const HERO_SLIDES = [
     title: "Advanced Bio-Agriculture",
     subtitle: "Pioneering the market with high-efficiency enzymes and pharmaceutical-grade agricultural additives.",
     image: asset('assets/slide/slide-2.jpg')
+  },
+  {
+    title: "Decades of Trusted Leadership",
+    subtitle: "Leveraging 35+ years of agricultural expertise to solve modern farming challenges.",
+    image: asset('assets/slide/slide-3.jpg')
   }
 ];
 
 export const PARTNER_DETAILS = [
-  { name: 'JHEJIANG ESIGMA CO. LTD.', desc: 'Chinese leader in agricultural additives specializing in soil health and growth enhancers.', logo: asset('assets/clients/1.jpg') },
-  { name: 'AVITECH NUTRITION PVT LTD', desc: 'Specialists in nutritional supplements and growth promoters for high-performance agriculture.', logo: asset('assets/clients/2.jpg') },
-  { name: 'ZOUPING JUJIA CHOLINE INDUSTRIAL CO. LTD', desc: 'World-class manufacturer of Choline Chloride for agricultural use.', logo: asset('assets/clients/3.jpg') },
-  { name: 'SICHUAN CHEMICAL CORPORATION', desc: 'Leading mineral and chemical provider for specialized agricultural needs.', logo: asset('assets/clients/4.jpg') },
-  { name: 'GUANGDONG VTR BIO-TEC CO. LTD.', desc: 'Largest professional agricultural enzyme manufacturer in China with 18+ years of experience.', logo: asset('assets/clients/5.jpg') },
-  { name: 'YNNAN COPPER INDUSTRY SUNWARD CHEMICALS CO. LTD', desc: 'Specialized mineral producer for micronutrient solutions.', logo: asset('assets/clients/6.jpg') },
-  { name: 'YUNNA XINLONG MINERAL ANIMAL FEED CO. LTD.', desc: 'Chemical division of the New Hope Group, focusing on mineral nutrition.', logo: asset('assets/clients/1.jpg') },
-  { name: 'HENGYI VET CO. LTD', desc: 'Partner for veterinary and agricultural health solutions.', logo: asset('assets/clients/2.jpg') },
-  { name: 'INTEGRATED WORLD ENTERPRISE (INTEWE)', desc: 'Global strategic partner for agricultural distribution.', logo: asset('assets/clients/3.jpg') },
-  { name: 'YUNNAN XINLONG MINERAL FEED', desc: 'Specialized supplier of mineral-based feed and crop additives.', logo: asset('assets/clients/4.jpg') },
-  { name: 'ZHEJIANG SHENGHUA BIOK BIOLOGY', desc: 'Innovative biological solutions provider for agriculture.', logo: asset('assets/clients/5.jpg') }
+  { name: 'JHEJIANG ESIGMA CO. LTD.', desc: 'Chinese leader in agricultural additives specializing in soil health and growth enhancers.', logo: asset('assets/clients/client-1.png') },
+  { name: 'AVITECH NUTRITION PVT LTD', desc: 'Specialists in nutritional supplements and growth promoters for high-performance agriculture.', logo: asset('assets/clients/client-2.png') },
+  { name: 'ZOUPING JUJIA CHOLINE INDUSTRIAL CO. LTD', desc: 'World-class manufacturer of Choline Chloride for agricultural use.', logo: asset('assets/clients/client-3.png') },
+  { name: 'SICHUAN CHEMICAL CORPORATION', desc: 'Leading mineral and chemical provider for specialized agricultural needs.', logo: asset('assets/clients/client-4.png') },
+  { name: 'GUANGDONG VTR BIO-TEC CO. LTD.', desc: 'Largest professional agricultural enzyme manufacturer in China with 18+ years of experience.', logo: asset('assets/clients/client-5.png') },
+  { name: 'YNNAN COPPER INDUSTRY SUNWARD CHEMICALS CO. LTD', desc: 'Specialized mineral producer for micronutrient solutions.', logo: asset('assets/clients/client-6.png') },
+  { name: 'YUNNA XINLONG MINERAL ANIMAL FEED CO. LTD.', desc: 'Chemical division of the New Hope Group, focusing on mineral nutrition.', logo: asset('assets/clients/client-1.png') },
+  { name: 'HENGYI VET CO. LTD', desc: 'Partner for veterinary and agricultural health solutions.', logo: asset('assets/clients/client-2.png') },
+  { name: 'INTEGRATED WORLD ENTERPRISE (INTEWE)', desc: 'Global strategic partner for agricultural distribution.', logo: asset('assets/clients/client-3.png') },
+  { name: 'YUNNAN XINLONG MINERAL FEED', desc: 'Specialized supplier of mineral-based feed and crop additives.', logo: asset('assets/clients/client-4.png') },
+  { name: 'ZHEJIANG SHENGHUA BIOK BIOLOGY', desc: 'Innovative biological solutions provider for agriculture.', logo: asset('assets/clients/client-5.png') }
 ];
 
 export const HOTLINES = [
@@ -264,8 +251,8 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "Discover how deep processing of phosphorus resources is revolutionizing agricultural yield across Southeast Asia.",
     content: "Phosphorus is a cornerstone of modern agriculture. At AR Fertilizer Limited, we are partnering with global leaders like Sichuan Chanhen to bring high-purity MCP and MDCP to the local market. Our research shows that optimized mineral intake in agriculture significantly boosts crop health and productivity...",
     date: "Jan 12, 2024",
-    author: "Dr. Michael Lau",
-    image: asset('assets/portfolio/portfolio-1.jpg'),
+    author: "Atiar Rahman",
+    image: asset('assets/portfolio/portfolio-details-1.jpg'),
     category: "Technical"
   },
   {
@@ -275,7 +262,7 @@ export const BLOG_POSTS: BlogPost[] = [
     content: "Bio-engineering in agriculture is no longer a luxury but a necessity for sustainable farming. Guangdong VTR Bio-Tech has pioneered enzymatic solutions that ensure better nutrient absorption. By integrating these solutions, farmers can expect a significant reduction in waste and cost...",
     date: "Feb 05, 2024",
     author: "Atiar Rahman",
-    image: asset('assets/portfolio/portfolio-2.jpg'),
+    image: asset('assets/portfolio/portfolio-details-2.jpg'),
     category: "Research"
   }
 ];
