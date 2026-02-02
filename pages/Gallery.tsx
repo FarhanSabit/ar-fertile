@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { GALLERY } from '../constants';
 import { Maximize2, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -48,9 +48,6 @@ const GalleryItem: React.FC<{ item: typeof GALLERY[0], index: number, onOpen: ()
           <h3 className="text-3xl font-black tracking-tighter leading-tight drop-shadow-md">
             {item.title}
           </h3>
-          <p className="mt-2 text-emerald-200 text-sm font-bold uppercase tracking-widest opacity-80">
-            {item.category} Insight
-          </p>
         </div>
 
         {/* Floating Maximize Icon */}
@@ -63,19 +60,7 @@ const GalleryItem: React.FC<{ item: typeof GALLERY[0], index: number, onOpen: ()
 };
 
 const Gallery: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('All');
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-
-  const categories = useMemo(() => {
-    const cats = new Set(GALLERY.map(item => item.category));
-    return ['All', ...Array.from(cats)].sort();
-  }, []);
-
-  const filteredItems = useMemo(() => {
-    return activeTab === 'All'
-      ? GALLERY
-      : GALLERY.filter(item => item.category === activeTab);
-  }, [activeTab]);
 
   const openLightbox = (index: number) => {
     setSelectedIndex(index);
@@ -90,14 +75,14 @@ const Gallery: React.FC = () => {
   const nextImage = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (selectedIndex !== null) {
-      setSelectedIndex((selectedIndex + 1) % filteredItems.length);
+      setSelectedIndex((selectedIndex + 1) % GALLERY.length);
     }
   };
 
   const prevImage = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (selectedIndex !== null) {
-      setSelectedIndex((selectedIndex - 1 + filteredItems.length) % filteredItems.length);
+      setSelectedIndex((selectedIndex - 1 + GALLERY.length) % GALLERY.length);
     }
   };
 
@@ -110,39 +95,18 @@ const Gallery: React.FC = () => {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedIndex, filteredItems]);
+  }, [selectedIndex]);
 
   return (
     <div className="bg-white min-h-screen">
       {/* Header */}
-      <section className="bg-brand-maroon py-12 md:py-20 relative overflow-hidden">
+      <section className="bg-emerald-700 py-12 md:py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-white/10 skew-x-12 transform translate-x-20"></div>
         <div className="container mx-auto px-6 relative z-10">
           <h1 className="text-3xl md:text-7xl font-black text-white mb-4 md:mb-6 tracking-tighter">Gallery</h1>
-          <p className="text-brand-emerald text-base md:text-xl max-w-2xl leading-relaxed font-medium">
-            State-of-the-art facilities and strategic presence across Bangladesh's agricultural landscape.
+          <p className="text-emerald-100 text-base md:text-xl max-w-2xl leading-relaxed font-medium">
+            Discover our state-of-the-art facilities and commitment to agricultural excellence across Bangladesh.
           </p>
-        </div>
-      </section>
-
-
-      {/* Tabs Filter */}
-      <section className="py-12 bg-white sticky top-20 z-30 shadow-sm border-b border-slate-100">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-6">
-            {categories.map(tab => (
-              <button
-                key={tab}
-                onClick={() => { setActiveTab(tab); setSelectedIndex(null); }}
-                className={`px-6 md:px-10 py-3 md:py-4 rounded-[1rem] md:rounded-[1.5rem] text-[9px] md:text-[10px] font-black tracking-[0.2em] uppercase transition-all duration-300 ${activeTab === tab
-                  ? 'bg-emerald-600 text-white shadow-2xl shadow-emerald-600/30 scale-105'
-                  : 'bg-slate-50 text-slate-500 hover:bg-slate-100 hover:text-slate-900'
-                  }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -150,7 +114,7 @@ const Gallery: React.FC = () => {
       <section className="py-24 bg-slate-50/50">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {filteredItems.map((item, index) => (
+            {GALLERY.map((item, index) => (
               <GalleryItem
                 key={item.id}
                 item={item}
@@ -185,8 +149,8 @@ const Gallery: React.FC = () => {
           <div className="relative max-w-7xl w-full h-full flex flex-col items-center justify-center">
             <div className="relative overflow-hidden rounded-[3rem] shadow-[0_0_100px_rgba(5,150,105,0.25)]">
               <img
-                src={filteredItems[selectedIndex].image}
-                alt={filteredItems[selectedIndex].title}
+                src={GALLERY[selectedIndex].image}
+                alt={GALLERY[selectedIndex].title}
                 className="max-w-full max-h-[70vh] object-contain animate-in zoom-in duration-700"
                 loading="lazy"
               />
@@ -194,14 +158,14 @@ const Gallery: React.FC = () => {
 
             <div className="mt-12 text-center max-w-2xl animate-in fade-in slide-in-from-top-6 duration-1000">
               <span className="text-emerald-400 font-black tracking-[0.5em] uppercase text-[10px] mb-4 block">
-                {filteredItems[selectedIndex].category}
+                {GALLERY[selectedIndex].category}
               </span>
               <h3 className="text-4xl lg:text-6xl font-black text-white mb-8 tracking-tighter leading-none">
-                {filteredItems[selectedIndex].title}
+                {GALLERY[selectedIndex].title}
               </h3>
 
               <div className="flex space-x-3 justify-center">
-                {filteredItems.map((_, i) => (
+                {GALLERY.map((_, i) => (
                   <div
                     key={i}
                     className={`h-1.5 rounded-full transition-all duration-500 ${selectedIndex === i ? 'w-12 bg-emerald-500' : 'w-2 bg-white/10'}`}

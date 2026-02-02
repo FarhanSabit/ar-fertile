@@ -197,12 +197,12 @@ export const GALLERY: GalleryItem[] = [
   { id: 'g4', title: 'Soil Fertility Research', category: 'Innovation', image: asset('assets/portfolio/portfolio-4.jpg') },
   { id: 'g5', title: 'Technical Lab Analysis', category: 'Science', image: asset('assets/portfolio/portfolio-5.jpg') },
   { id: 'g6', title: 'Field Trial Monitoring', category: 'Environment', image: asset('assets/portfolio/portfolio-6.jpg') },
-  { id: 'g7', title: 'Technical Advisory Board', category: 'Experience', image: asset('assets/team/team-2.jpg') },
-  { id: 'g8', title: 'Expert Diagnostic Services', category: 'Advisory', image: asset('assets/team/team-3.jpg') },
-  { id: 'g9', title: 'Logistics Management', category: 'Team', image: asset('assets/team/team-4.jpg') },
-  { id: 'g10', title: 'Product Quality Control', category: 'Testing', image: asset('assets/portfolio/portfolio-7.jpg') },
-  { id: 'g11', title: 'Strategic Planning Meet', category: 'Corporate', image: asset('assets/portfolio/portfolio-8.jpg') },
-  { id: 'g12', title: 'Sustainable Farming Future', category: 'Innovation', image: asset('assets/portfolio/portfolio-9.jpg') }
+  { id: 'g10', title: 'Production Excellence', category: 'Facilities', image: asset('assets/portfolio/portfolio-7.jpg') },
+  { id: 'g11', title: 'Quality Control Lab', category: 'Science', image: asset('assets/portfolio/portfolio-8.jpg') },
+  { id: 'g12', title: 'Sustainability Initiatives', category: 'Environment', image: asset('assets/portfolio/portfolio-9.jpg') },
+  { id: 'g13', title: 'Product Detail Analysis', category: 'Science', image: asset('assets/portfolio/portfolio-details-1.jpg') },
+  { id: 'g14', title: 'Mineral Processing Unit', category: 'Facilities', image: asset('assets/portfolio/portfolio-details-2.jpg') },
+  { id: 'g15', title: 'Fertilizer Quality Check', category: 'Testing', image: asset('assets/portfolio/portfolio-details-3.jpg') }
 ];
 
 export const HERO_SLIDES = [

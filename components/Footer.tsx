@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   Facebook, Twitter, Linkedin, Instagram, Mail,
-  MapPin, PhoneCall, ChevronRight, Send
+  MapPin, PhoneCall, ChevronRight
 } from 'lucide-react';
 import { HOTLINES } from '../constants';
 
@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white pt-24 pb-12">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20">
           {/* Company Brand */}
           <div className="flex flex-col">
             <div className="flex items-center space-x-3 mb-8 group">
@@ -50,85 +50,73 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Hotline Numbers */}
-          <div>
-            <h4 className="text-white font-black text-sm uppercase tracking-[0.2em] mb-8 relative">
-              Hotline Numbers
-              <span className="absolute -bottom-3 left-0 w-8 h-1 bg-emerald-600 rounded-full"></span>
-            </h4>
-            <ul className="space-y-4">
-              {HOTLINES.map((hotline, idx) => (
-                <li key={idx} className="flex items-center space-x-3 group">
-                  <div className="w-8 h-8 bg-slate-800/50 rounded-lg flex items-center justify-center text-emerald-500 group-hover:bg-emerald-600 group-hover:text-white transition-all">
-                    <PhoneCall size={16} />
-                  </div>
-                  <a href={`tel:${hotline.replace(/[^0-9]/g, '')}`} className="text-slate-400 hover:text-emerald-500 transition-colors font-bold text-sm">
-                    {hotline}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Navigation Links */}
-          <div>
-            <h4 className="text-lg font-black mb-8 border-b-2 border-emerald-500/20 pb-3 inline-block tracking-tight">Quick Navigation</h4>
-            <ul className="grid grid-cols-1 gap-5">
-              {['Home', 'About', 'Products', 'Gallery', 'Contact'].map((item) => (
-                <li key={item}>
-                  <Link
-                    to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                    className="text-slate-400 hover:text-emerald-500 flex items-center space-x-3 transition-all group font-medium"
-                  >
-                    <ChevronRight size={14} className="text-emerald-500 group-hover:translate-x-1 transition-transform" />
-                    <span>{item}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Hotline Numbers & Quick Nav Combined for 3-col balance */}
+          <div className="grid grid-cols-1 gap-12">
+            <div>
+              <h4 className="text-white font-black text-sm uppercase tracking-[0.2em] mb-8 relative">
+                Hotline Numbers
+                <span className="absolute -bottom-3 left-0 w-8 h-1 bg-emerald-600 rounded-full"></span>
+              </h4>
+              <ul className="space-y-4">
+                {HOTLINES.map((hotline, idx) => (
+                  <li key={idx} className="flex items-center space-x-3 group">
+                    <div className="w-8 h-8 bg-slate-800/50 rounded-lg flex items-center justify-center text-emerald-500 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                      <PhoneCall size={16} />
+                    </div>
+                    <a href={`tel:${hotline.replace(/[^0-9]/g, '')}`} className="text-slate-400 hover:text-emerald-500 transition-colors font-bold text-sm">
+                      {hotline}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-black mb-6 border-b-2 border-emerald-500/20 pb-3 inline-block tracking-tight">Quick Navigation</h4>
+              <ul className="grid grid-cols-2 gap-4">
+                {['Home', 'About', 'Products', 'Gallery', 'Contact'].map((item) => (
+                  <li key={item}>
+                    <Link
+                      to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                      className="text-slate-400 hover:text-emerald-500 flex items-center space-x-3 transition-all group font-medium"
+                    >
+                      <ChevronRight size={14} className="text-emerald-500 group-hover:translate-x-1 transition-transform" />
+                      <span>{item}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Official Contact Info */}
-          <div>
-            <h4 className="text-lg font-black mb-8 border-b-2 border-emerald-500/20 pb-3 inline-block tracking-tight">Get In Touch</h4>
-            <ul className="space-y-8">
-              <li className="flex items-start space-x-5 group">
-                <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all">
-                  <MapPin size={20} />
-                </div>
-                <span className="text-slate-400 text-sm leading-relaxed font-medium">House-51, Flat: A-7 (7th Floor), Rabindra Sarani Road, Sector-3, Uttara, Dhaka-1230, Bangladesh</span>
-              </li>
-              <li className="flex items-center space-x-5 group">
-                <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all">
-                  <PhoneCall size={20} />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-slate-400 text-sm font-bold">+88-02-58951859</span>
-                  <span className="text-slate-500 text-xs font-bold">Hotline: +88 01713-011040</span>
-                </div>
-              </li>
-              <li className="flex items-center space-x-5 group">
-                <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+          <div className="flex flex-col justify-between">
+            <div>
+              <h4 className="text-lg font-black mb-8 border-b-2 border-emerald-500/20 pb-3 inline-block tracking-tight">Get In Touch</h4>
+              <ul className="space-y-8">
+                <li className="flex items-start space-x-5 group">
+                  <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                    <MapPin size={20} />
+                  </div>
+                  <span className="text-slate-400 text-sm leading-relaxed font-medium">House-51, Flat: A-7 (7th Floor), Rabindra Sarani Road, Sector-3, Uttara, Dhaka-1230, Bangladesh</span>
+                </li>
+                <li className="flex items-center space-x-5 group">
+                  <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                    <PhoneCall size={20} />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-slate-400 text-sm font-bold">+88-02-58951859</span>
+                    <span className="text-slate-500 text-xs font-bold">Hotline: +88 01713-011040</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="mt-8 pt-8 border-t border-slate-800/50">
+              <a href="mailto:info@arfertile.com" className="flex items-center space-x-4 group">
+                <div className="w-10 h-10 bg-slate-800/50 rounded-xl flex items-center justify-center text-emerald-500 group-hover:bg-emerald-600 group-hover:text-white transition-all">
                   <Mail size={20} />
                 </div>
-                <a href="mailto:info@arfertile.com" className="text-slate-400 hover:text-emerald-500 transition-colors font-bold text-sm">info@arfertile.com</a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Corporate Newsletter */}
-          <div>
-            <h4 className="text-lg font-black mb-8 border-b-2 border-emerald-500/20 pb-3 inline-block tracking-tight">Global Updates</h4>
-            <p className="text-slate-400 mb-8 leading-relaxed font-medium text-sm">Subscribe to receive technical insights and industry breakthroughs directly from our partners.</p>
-            <div className="relative">
-              <input
-                type="email"
-                placeholder="Work Email Address"
-                className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 transition-all font-bold placeholder:text-slate-600"
-              />
-              <button className="absolute right-2 top-2 bg-emerald-600 hover:bg-emerald-700 text-white p-2.5 rounded-xl transition-all shadow-lg active:scale-95 group">
-                <Send size={18} className="group-hover:rotate-12 transition-transform" />
-              </button>
+                <span className="text-slate-400 group-hover:text-emerald-500 transition-colors font-bold text-sm">info@arfertile.com</span>
+              </a>
             </div>
           </div>
         </div>
