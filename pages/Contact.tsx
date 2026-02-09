@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="relative bg-emerald-50 h-[400px] lg:h-auto overflow-hidden">
             <img
-              src="/assets/portfolio/portfolio-6.jpg"
+              src="/assets/agro-machineries.jpg"
               alt="Global Logistics and Network Map Representation"
               className="w-full h-full object-cover opacity-80 mix-blend-multiply"
               loading="lazy"

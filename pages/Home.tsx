@@ -58,8 +58,8 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16 gap-8">
             <div className="max-w-xl text-center md:text-left w-full">
-              <span className="text-brand-maroon font-bold tracking-widest uppercase text-sm mb-4 block">Featured Showcase</span>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">High-Performance Products</h2>
+              <span className="text-brand-maroon font-bold tracking-widest uppercase text-sm mb-4 block">Our Products</span>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Advanced Nutrition for Excellence</h2>
 
               {/* Category Filter - Optimized for 756px threshold */}
               <div className="mt-8">
@@ -69,8 +69,8 @@ const Home: React.FC = () => {
                       key={cat}
                       onClick={() => setActiveCategory(cat as any)}
                       className={`px-3 py-1.5 min-[756px]:px-5 min-[756px]:py-2.5 rounded-full text-[8px] min-[756px]:text-[10px] lg:text-xs font-black uppercase tracking-widest transition-all shrink-0 ${activeCategory === cat
-                          ? 'bg-brand-maroon text-white shadow-lg shadow-brand-maroon/20 scale-105'
-                          : 'bg-white text-slate-500 hover:bg-slate-100 border border-slate-200 hover:border-brand-maroon/30'
+                        ? 'bg-brand-maroon text-white shadow-lg shadow-brand-maroon/20 scale-105'
+                        : 'bg-white text-slate-500 hover:bg-slate-100 border border-slate-200 hover:border-brand-maroon/30'
                         }`}
                     >
                       {cat}
@@ -124,40 +124,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Product Categories Preview */}
-      <section className="py-12 md:py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16">
-            <div className="max-w-xl text-center md:text-left w-full">
-              <span className="text-brand-maroon font-bold tracking-widest uppercase text-sm mb-4 block">Product Categories</span>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Advanced Nutrition for Excellence</h2>
-            </div>
-            <Link to="/products" className="group relative flex items-center justify-center md:justify-start space-x-2 text-brand-maroon font-bold text-lg mt-6 mb-6 md:mb-0 w-full md:w-auto hover:text-brand-maroon-dark transition-colors">
-              <span>View All Products</span>
-              <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-              <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-brand-maroon transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-            </Link>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { name: "Fertilizers", count: "20+ Products", icon: Droplets, img: "/assets/portfolio/portfolio-7.jpg" },
-              { name: "Minerals", count: "10+ Products", icon: TrendingUp, img: "/assets/portfolio/portfolio-8.jpg" },
-              { name: "Micro-nutrients", count: "15+ Products", icon: ShieldCheck, img: "/assets/portfolio/portfolio-9.jpg" }
-            ].map((cat, idx) => (
-              <Link to="/products" key={idx} className="group relative h-[450px] overflow-hidden rounded-[3rem] shadow-lg">
-                <img src={cat.img} alt={cat.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-90" />
-                <div className="absolute bottom-10 left-10 text-white z-10">
-                  <cat.icon className="text-brand-gold mb-4" size={40} />
-                  <h3 className="text-3xl font-extrabold mb-2 tracking-tight">{cat.name}</h3>
-                  <p className="text-slate-300 font-medium">{cat.count}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* About Section Teaser */}
       <section className="py-12 md:py-24 bg-slate-50">
@@ -166,7 +133,7 @@ const Home: React.FC = () => {
             <div className="relative">
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-maroon/5 rounded-full blur-3xl opacity-60" />
               <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-brand-green/5 rounded-full blur-3xl opacity-60" />
-              <div className="relative rounded-[3rem] overflow-hidden shadow-2xl z-10 aspect-[4/5]">
+              <div className="relative rounded-[3rem] overflow-hidden shadow-2xl z-10 aspect-[4/5] bg-white flex items-center justify-center">
                 <img src="/assets/team/team-1.jpg" alt="AR Fertilizer CEO" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 md:-left-6 bg-white p-6 md:p-8 rounded-3xl shadow-xl z-20 max-w-[280px] md:max-w-[320px] border border-slate-100">

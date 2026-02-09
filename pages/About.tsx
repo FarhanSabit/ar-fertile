@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Target, Eye, Shield, Globe, Flag, Factory, TrendingUp, Zap, Mail, Linkedin, Twitter } from 'lucide-react';
-import { TEAM, MILESTONES } from '../constants';
+import { TEAM, MILESTONES, PARTNER_DETAILS } from '../constants';
 
 const TimelineItem: React.FC<{ milestone: typeof MILESTONES[0], index: number }> = ({ milestone, index }) => {
   const itemRef = useRef<HTMLDivElement>(null);
@@ -128,6 +128,59 @@ const About: React.FC = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-24 bg-emerald-50 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-emerald-600 font-bold tracking-widest uppercase text-sm mb-4 block">Client Feedback</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Voices of Success</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                text: "AR Fertilizer has been our trusted partner for over 5 years. Their Solubor Boron significantly improved our crop yield.",
+                author: "Rahim Uddin",
+                role: "Proprietor, Rahim Agro Farm",
+                location: "Rajshahi"
+              },
+              {
+                text: "The quality of their Zinc Sulphate is unmatched in the market. We highly recommend their products for better farming results.",
+                author: "Abdul Karim",
+                role: "Managing Director, Green Valley",
+                location: "Bogura"
+              },
+              {
+                text: "Excellent technical support and timely delivery. Their team truly understands the needs of modern farmers.",
+                author: "Md. Sohel Rana",
+                role: "CEO, Rana Poultry & Feed",
+                location: "Gazipur"
+              }
+            ].map((testimonial, idx) => (
+              <div key={idx} className="bg-white p-10 rounded-[2.5rem] shadow-xl hover:-translate-y-2 transition-transform duration-300 border border-emerald-100 flex flex-col relative">
+                <div className="text-emerald-500 mb-6">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z" />
+                  </svg>
+                </div>
+                <p className="text-slate-600 text-lg italic mb-8 flex-grow leading-relaxed">"{testimonial.text}"</p>
+                <div className="flex items-center mt-auto">
+                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold text-xl mr-4">
+                    {testimonial.author.charAt(0)}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900">{testimonial.author}</h4>
+                    <p className="text-emerald-600 text-xs font-bold uppercase tracking-wider">{testimonial.role}</p>
+                    <p className="text-slate-400 text-xs">{testimonial.location}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Interactive Timeline */}
       <section className="py-24 bg-slate-50 overflow-hidden">
         <div className="container mx-auto px-6">
@@ -147,6 +200,45 @@ const About: React.FC = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Clients Slider Section */}
+      <section className="py-24 bg-white border-t border-slate-100 overflow-hidden">
+        <div className="container mx-auto px-6 mb-16 text-center">
+          <span className="text-emerald-600 font-bold tracking-widest uppercase text-sm mb-4 block">Our Partners</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Trusted by Industry Leaders</h2>
+        </div>
+
+        {/* Infinite Slider */}
+        <div className="relative w-full overflow-hidden">
+          <div className="flex animate-scroll whitespace-nowrap gap-12 md:gap-24 items-center">
+            {/* Duplicating the list to create a seamless infinite loop */}
+            {[...PARTNER_DETAILS, ...PARTNER_DETAILS].map((partner, idx) => (
+              <div key={idx} className="flex-shrink-0 group relative">
+                <div className="w-48 h-32 bg-slate-50 rounded-3xl border border-slate-100 flex items-center justify-center p-6 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 hover:scale-110 hover:shadow-xl hover:border-emerald-100">
+                  {partner.logo ? (
+                    <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain" />
+                  ) : (
+                    <span className="text-sm font-bold text-center whitespace-normal">{partner.name}</span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <style>{`
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-scroll {
+            animation: scroll 30s linear infinite;
+          }
+          .animate-scroll:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
       </section>
 
       {/* Vision & Mission */}
@@ -169,7 +261,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div >
   );
 };
 
