@@ -58,10 +58,10 @@ const Footer: React.FC = () => {
           <div className="min-[666px]:col-span-1 min-[756px]:w-[25%] min-[756px]:px-4">
             <h4 className="text-lg font-black mb-8 border-b-2 border-emerald-500/20 pb-3 inline-block tracking-tight">Quick Navigation</h4>
             <ul className="grid grid-cols-1 gap-4">
-              {['Home', 'About', 'Products', 'Gallery', 'Contact'].map((item) => (
+              {['Home', 'About', 'Products', 'Brochure', 'Gallery', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link
-                    to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                    to={item === 'Home' ? '/' : item === 'Brochure' ? '/brochure' : `/${item.toLowerCase()}`}
                     className="text-slate-400 hover:text-emerald-500 flex items-center space-x-3 transition-all group font-medium"
                   >
                     <ChevronRight size={14} className="text-emerald-500 group-hover:translate-x-1 transition-transform" />

@@ -3,8 +3,9 @@ import React, { useState, useMemo } from 'react';
 import {
   Search, Filter, Download, Tag, X, CheckCircle,
   MessageSquare, ArrowRight, Eye, Share2,
-  Linkedin, Twitter, Mail, Copy, Check
+  Linkedin, Twitter, Mail, Copy, Check, FileText
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { PRODUCTS } from '../constants';
 import { Category, Product } from '../types';
 
@@ -179,6 +180,62 @@ const Products: React.FC = () => {
               </button>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Brochure Preview Section */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-[2rem] p-8 md:p-12 border border-slate-200">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Brochure Preview */}
+              <div className="relative order-2 lg:order-1">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] max-w-xs mx-auto bg-white">
+                  <img 
+                    src="/assets/brochure/AR Fertilizer Brochure.png" 
+                    alt="AR Fertilizer Brochure" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent"></div>
+                </div>
+                {/* Decorative elements */}
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-brand-maroon/10 rounded-full blur-2xl"></div>
+                <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-brand-green/10 rounded-full blur-2xl"></div>
+              </div>
+
+              {/* Content */}
+              <div className="text-center lg:text-left order-1 lg:order-2">
+                <span className="text-brand-maroon font-bold tracking-widest uppercase text-sm mb-4 block">Product Catalog</span>
+                <h2 className="text-2xl md:text-4xl font-black text-slate-900 mb-4 md:mb-6">Download Our Full Brochure</h2>
+                <p className="text-slate-600 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
+                  Get comprehensive information about our complete range of fertilizers, micronutrients, and agricultural solutions in one convenient document.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                  <Link
+                    to="/brochure"
+                    className="group bg-gradient-to-r from-brand-maroon to-brand-maroon-dark hover:from-brand-maroon-dark hover:to-brand-maroon text-white px-8 py-4 rounded-full font-bold text-base flex items-center gap-3 shadow-xl shadow-brand-maroon/20 transition-all active:scale-95"
+                  >
+                    <FileText size={20} />
+                    <span>View Brochure</span>
+                    <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <button
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/assets/brochure/AR Fertilizer Brochure.png';
+                      link.download = 'AR-Fertiler-Brochure.png';
+                      link.click();
+                    }}
+                    className="group bg-white text-slate-700 hover:text-brand-maroon border-2 border-slate-200 hover:border-brand-maroon px-8 py-4 rounded-full font-bold text-base flex items-center gap-3 transition-all active:scale-95"
+                  >
+                    <Download size={20} />
+                    <span>Download</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import {
   Award, Zap, ShieldCheck, Globe, ArrowRight,
   TrendingUp, Leaf, Droplets, Users, Package,
-  CheckCircle2, ShoppingBag, MessageSquare
+  CheckCircle2, ShoppingBag, MessageSquare, FileText, Download
 } from 'lucide-react';
 import HeroSlider from '../components/HeroSlider';
 import { PRODUCTS, TEAM, PARTNER_DETAILS } from '../constants';
@@ -183,6 +183,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+
 
       {/* Final CTA Banner */}
       <section className="py-12 md:py-24 bg-white">

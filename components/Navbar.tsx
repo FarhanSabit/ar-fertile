@@ -1,11 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X, MessageCircle, ChevronDown } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [aboutMenuOpen, setAboutMenuOpen] = useState(false);
   const location = useLocation();
 
   // Handle scroll effect
@@ -34,9 +35,14 @@ const Navbar: React.FC = () => {
     };
   }, [isOpen]);
 
+  // Close about menu on route change
+  useEffect(() => {
+    setAboutMenuOpen(false);
+  }, [location]);
+
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
+    { name: 'About', path: '/about', hasDropdown: true },
     { name: 'Products', path: '/products' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Contact', path: '/contact' },
@@ -96,16 +102,38 @@ const Navbar: React.FC = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`text-sm font-bold tracking-wide rounded-full px-3 py-1 transition-all relative group ${getActiveColor(location.pathname === link.path)} ${getHoverColor()} hover:ring-8 ${(isOpen || isScrolled) ? 'hover:ring-brand-maroon/5' : 'hover:ring-white/10'
-                }`}
-            >
-              {link.name}
-              <span className={`absolute -bottom-1 left-3 right-3 h-0.5 transform scale-x-0 group-hover:scale-x-100 transition-transform ${location.pathname === link.path ? 'scale-x-100' : ''} ${(isOpen || isScrolled) ? 'bg-brand-maroon' : 'bg-brand-gold'
-                }`}></span>
-            </Link>
+            <div key={link.name} className="relative group">
+              <Link
+                to={link.path}
+                className={`text-sm font-bold tracking-wide rounded-full px-3 py-1 flex items-center gap-1 transition-all relative ${getActiveColor(location.pathname === link.path)} ${getHoverColor()} hover:ring-8 ${(isOpen || isScrolled) ? 'hover:ring-brand-maroon/5' : 'hover:ring-white/10'
+                  }`}
+              >
+                {link.name}
+                {link.hasDropdown && <ChevronDown size={14} className={`transition-transform ${aboutMenuOpen ? 'rotate-180' : ''}`} />}
+                <span className={`absolute -bottom-1 left-3 right-3 h-0.5 transform scale-x-0 group-hover:scale-x-100 transition-transform ${location.pathname === link.path ? 'scale-x-100' : ''} ${(isOpen || isScrolled) ? 'bg-brand-maroon' : 'bg-brand-gold'
+                  }`}></span>
+              </Link>
+              
+              {/* Dropdown Menu */}
+              {link.hasDropdown && (
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left z-50">
+                  <div className="py-2">
+                    <Link
+                      to="/about"
+                      className="block px-4 py-3 text-sm font-bold text-slate-700 hover:bg-brand-maroon/5 hover:text-brand-maroon transition-colors"
+                    >
+                      Our Story
+                    </Link>
+                    <Link
+                      to="/brochure"
+                      className="block px-4 py-3 text-sm font-bold text-slate-700 hover:bg-brand-maroon/5 hover:text-brand-maroon transition-colors"
+                    >
+                      Brochure
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
           <a
             href={`https://wa.me/${whatsappNumber}`}
